@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/base.css">
-    <title>Your Title Here</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+    <title>Moroni Motta Web Page</title>
 </head>
 <body>
     <header>
@@ -22,19 +25,21 @@
     </nav>
     <main>
         <h2>WDD 230: Web Frontend Development</h2>
-        <section class="card">
-            <h3>Learning Activities</h3>
-            <ul>
-                <li><a href="#">Activity 1</a></li>
-                <li><a href="#">Activity 2</a></li>
-                <li><a href="#">Activity 3</a></li>
-            </ul>
-        </section>
-        <section class="card">
-            <h3>Information</h3>
-            <p>Weather: <span id="weather"></span></p>
-            <p>Number of visits: <span id="visits"></span></p>
-        </section>
+        <div class="container">
+            <section class="card">
+                <h3>Learning Activities</h3>
+                <ul>
+                    <li><a href="#">Activity 1</a></li>
+                    <li><a href="#">Activity 2</a></li>
+                    <li><a href="#">Activity 3</a></li>
+                </ul>
+            </section>
+            <section class="card">
+                <h3>Information</h3>
+                <p>Weather: <span id="weather"></span></p>
+                <p>Number of visits: <span id="visits"></span></p>
+            </section>
+        </div>
     </main>
     <footer>
         <p id="currentYear"></p>

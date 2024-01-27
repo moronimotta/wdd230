@@ -3,6 +3,7 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
 body {
     display: grid;
     place-items: center;
@@ -12,7 +13,6 @@ main {
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -40,6 +40,7 @@ nav {
     width: 80%;
     margin: 0 auto;
 }
+
 header img {
     padding: 10px;
 }	
@@ -48,12 +49,16 @@ nav ul {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    
 }
+
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 1px solid white;
 }
 
 ul {
@@ -61,11 +66,8 @@ ul {
 }
 
 .card {
-    display: grid;
-    grid-template-columns: 1fr;
     gap: 20px;
     background-color: #eee;
-
     border-radius: 10px;
 }
 
@@ -76,7 +78,7 @@ ul {
     color: white;
     margin: 0;
     border-radius: 10px 10px 0 0;
-
+    height: 50px;
 }
 
 .card li {
@@ -94,4 +96,4 @@ footer {
     width: 80%;
     margin: 5px;
     text-align: center;
-}	
+}
