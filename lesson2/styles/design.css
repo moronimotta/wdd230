@@ -26,7 +26,9 @@ main {
 h2 {
 	color: navy;
 	text-align: center;
+	grid-column: 1 / span 2;
 }
+	 
 
 article p {
 	text-align: justify;
