@@ -3,6 +3,11 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+.maps {
+    width: 100%;
+    margin: 5px;
+}
+
 
 body {
     display: grid;
@@ -71,6 +76,11 @@ ul {
     border-radius: 10px;
 }
 
+.card li::before {
+    content: "📌";
+    padding-right: 10px;
+}
+
 .card h3 {
     text-align: center;
     background-color: #006eb6;
@@ -97,3 +107,4 @@ footer {
     margin: 5px;
     text-align: center;
 }
+

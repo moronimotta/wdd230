@@ -4,12 +4,41 @@
         align-items: center;
     }
 
+    header {
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
     nav a {
         margin-bottom: 10px;
+    }
+
+    .mainMenu {
+        display: none;
+    }
+
+    .mainMenu.active {
+        display: block;
+    }
+
+    #hamburgerMenu {
+        background-color: #006eb6;
+        color: white;
+        width: 40px;
+        display: block;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
     }
 }
 
 @media screen and (min-width: 768px) {
+
+    #hamburgerMenu {
+        display: none;
+    }
+
     body {
         font-size: 16px;
         font-family: 'Roboto', sans-serif;
@@ -19,7 +48,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
-    
+
     }
 
     header {
@@ -55,12 +84,12 @@
 
     header img {
         padding: 10px;
-    }	
+    }
 
     nav ul {
         display: flex;
         justify-content: space-around;
-        flex-direction: row; 
+        flex-direction: row;
     }
 
     nav a {
