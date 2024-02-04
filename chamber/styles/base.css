@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 1rem;
+    background-color: #fff;
+}
+
+  .nav-item {
+    text-align: center;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+    color: #6c757d;
+  }
+  
+  .nav-link.active, .nav-link:hover {
+    background-color: #ab191a;
+    color: #fff;
+  }
+  
+main {
+    width: 80%;
+    margin: 0 auto;
+    gap: 20px;
+    /* display: grid; */
+}
+
+
+.call-to-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.call-to-action button {
+    margin-left: 20px;
+    
+}
+
+section {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    color: #ab191a;
+}
+
+section p {
+    color: black;
+}
+
+
+
+header {
+  width: 80%;
+  margin: 5px auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    width: 80%;
+  }
+  
+
+footer {
+    background-color: #ab191a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.weather-container {
+    text-align: center;
+  }
+  
+  .temperature {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .weather-description {
+    color: black;
+  }
+
+
