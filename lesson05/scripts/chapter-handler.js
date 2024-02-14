@@ -15,38 +15,53 @@ button.addEventListener('click', () => {
         alert("You cant submit a blank chapter")
         return input.focus()
     }
-
     handleInput();
 })
 
 function handleInput() {
+    // removes the first element of the array
     bookList.shift();
+
     bookList.forEach((book)=>{
         title = book.section.title;
+
+        // Lowercase the title and the input value
         title = title.toLowerCase();
         input.value = input.value.toLowerCase();
+
+        // Remove the chapter number from the input value
+        inputBookWihtoutChapter = input.value.replace(/\d/g, '');
+        titleBookWithoutChapter = title.replace(/\d/g, '');
+
+        // Chapter Entries
         chapters = book.section.entries;
-    
-        if(title.includes(input.value)){
+
+        if(titleBookWithoutChapter === inputBookWihtoutChapter){
+            // Keeps only the number from the input value
             chapterInput = input.value.replace(/\D/g,'');
+
+            // Number of chapter is always one less than the length of the array
             chapterCount = chapters.length - 1;
            
+            // If the number of the chapter is greater than the number of chapters in the book, does not exist
             if(chapterInput > chapterCount){
                 alert("Chapter not found");
                 return input.focus();
+            }else {
+                // If the chapter exists, display it
+                li.textContent = chapter[chapterInput].content.title;
+                deleteButton.textContent = '❌'
+                li.append(deleteButton)
+                list.append(li)
+                input.value = '';
+                input.focus()
             }
-            li.textContent = chapter[chapterInput].content.title;
-            deleteButton.textContent = '❌'
-            li.append(deleteButton)
-            list.append(li)
-            input.value = '';
-            input.focus()
-        }else {
-            alert("Book not found");
-            return input.focus();
+           
         }
     }
     )
+    alert("Book not found");
+    return input.focus();
 
 }
 
