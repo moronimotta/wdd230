@@ -49,7 +49,7 @@ function handleInput() {
         // Chapter Entries
         chapters = book.section.entries;
 
-        if(titleLowercase === inputBookWihtoutChapter){
+        if(titleLowercase == inputBookWihtoutChapter){
             // Keeps only the number from the input value
             chapterInput = input.value.replace(/\D/g,'');
 
