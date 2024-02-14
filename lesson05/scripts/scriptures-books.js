@@ -13,7 +13,9 @@ const request = {
 }
 
 fetch("https://www.churchofjesuschrist.org/study/api/v3/language-pages/type/dynamic?lang=eng&uri=/scriptures/bofm", request)
-.then((data)=>{
+then((response)=>{
+    return response.json();
+}).then((data)=>{
     bookList = data.toc.entries;
 }).catch((error)=>{
     alert(error);
