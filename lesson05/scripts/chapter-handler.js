@@ -56,8 +56,9 @@ function handleInput() {
         // if it's book wihtout chapter
         if (!book.section) {
             title = book.title;
+        }else{
+            title = book.section.title;
         }
-        title = book.section.title;
 
         // Lowercase the title
         titleLowercase = title.toLowerCase();
