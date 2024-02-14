@@ -8,7 +8,7 @@ function createEventListeners(deleteButton, li) {
         list.removeChild(li);
         input.focus();
     })
-    
+
 }
 
 button.addEventListener('click', () => {
@@ -54,14 +54,21 @@ function handleInput() {
     }
 
     // check if the input is already in the list
+    let isInputAlreadyInList = false;
     if (listItems.length > 0) {
         listItems.forEach((li) => {
             if (li.textContent.toLowerCase() === input.value.toLowerCase()) {
+                isInputAlreadyInList = true;
                 alert("Chapter already added");
                 input.value = '';
-                return input.focus();
+                input.focus();
             }
         });
+    }
+
+    // If the input is already in the list, return early
+    if (isInputAlreadyInList) {
+        return;
     }
 
     // Lowercase the input value
