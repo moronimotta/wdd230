@@ -53,6 +53,10 @@ function handleInput() {
     inputBookWihtoutChapter = inputBookWihtoutChapter.replace(/\s/g, '');
 
     bookList.forEach((book) => {
+        // if it's book wihtout chapter
+        if (!book.section) {
+            title = book.title;
+        }
         title = book.section.title;
 
         // Lowercase the title
