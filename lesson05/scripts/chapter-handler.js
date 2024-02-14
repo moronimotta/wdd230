@@ -43,6 +43,20 @@ function handleInput() {
     // removes the first element of the array
     bookList.shift();
 
+    // get all li from list
+    const listItems = list.querySelectorAll('li');
+
+    // check if the input is already in the list
+    if (listItems.length > 0) {
+        listItems.forEach((li) => {
+            if (li.textContent.toLowerCase() === input.value.toLowerCase()) {
+                alert("Chapter already added");
+                input.value = '';
+                return input.focus();
+            }
+        });
+    }
+
     // Lowercase the input value
     input.value = input.value.toLowerCase();
 
