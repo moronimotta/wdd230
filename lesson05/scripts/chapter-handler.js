@@ -30,8 +30,8 @@ function handleInput() {
         input.value = input.value.toLowerCase();
 
         // Remove the chapter number from the input value
-        inputBookWihtoutChapter = input.value.replace(/\d/g, '');
-        titleBookWithoutChapter = title.replace(/\d/g, '');
+        inputBookWihtoutChapter = input.value.replace(/^\d+\s/, '');
+        titleBookWithoutChapter = title.replace(/^\d+\s/, '');
 
         // Chapter Entries
         chapters = book.section.entries;
