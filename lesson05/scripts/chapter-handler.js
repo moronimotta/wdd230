@@ -46,22 +46,25 @@ function handleInput() {
     // get all li from list
     const listItems = list.querySelectorAll('li');
 
-    // if list has more than 10 items, alert the user
-    if (listItems.length >= 10) {
-        alert("You can't add more than 10 chapters");
-        input.value = '';
-        input.focus();
-        return;
-    }
+    // Lowercase the input value
+    const inputLowercase = input.value.toLowerCase();
 
-    // check if the input is already in the list
+    // Check if the input already exists in the list
     for (const li of listItems) {
-        if (li.textContent.toLowerCase() === input.value.toLowerCase()) {
+        if (li.textContent.toLowerCase() === inputLowercase) {
             alert("Chapter already added");
             input.value = '';
             input.focus();
             return;
         }
+    }
+
+    // if list has more than 10 items, alert the user
+    if (listItems.length > 10) {
+        alert("You can't add more than 10 chapters");
+        input.value = '';
+        input.focus();
+        return;
     }
 
     // Lowercase the input value
