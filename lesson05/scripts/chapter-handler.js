@@ -86,6 +86,7 @@ function handleInput() {
                 // If the number of the chapter is greater than the number of chapters in the book, does not exist
                 if (chapterNumberInput > chapterCount || chapterNumberInput < 0) {
                     alert("Chapter not found or invalid chapter number");
+                    input.value = '';
                     return input.focus();
                 }
                 // If the chapter exists, display it
@@ -94,7 +95,7 @@ function handleInput() {
             }
 
             // Set the values
-            link.href = `https://www.churchofjesuschrist.org/study/${url}?lang=eng`;
+            link.href = `https://www.churchofjesuschrist.org/study${url}?lang=eng`;
             link.textContent = '🔗';
             deleteButton.textContent = '❌';
 
@@ -110,8 +111,6 @@ function handleInput() {
         }
     });
 
-    alert("Book not found");
-    input.focus();
 }
 
 
