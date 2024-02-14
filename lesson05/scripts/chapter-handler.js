@@ -3,7 +3,7 @@ const button = document.querySelector("button");
 const list = document.getElementById("list");
 
 
-function createEventListeners() {
+function createEventListeners(deleteButton) {
     deleteButton.addEventListener('click', () => {
         list.removeChild(li);
         input.focus();
@@ -75,7 +75,7 @@ function handleInput() {
             const li = document.createElement('li');
             const deleteButton = document.createElement('button')
             const link = document.createElement('a');
-            createEventListeners();
+            createEventListeners(deleteButton);
 
             if (!book.section) {
                 url = url;
