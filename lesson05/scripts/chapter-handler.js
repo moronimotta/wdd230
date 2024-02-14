@@ -1,6 +1,7 @@
 const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.getElementById("list");
+const addedChapters = [];
 
 
 function createEventListeners(deleteButton, li) {
@@ -45,19 +46,6 @@ function handleInput() {
 
     // get all li from list
     const listItems = list.querySelectorAll('li');
-
-    // Lowercase the input value
-    const inputLowercase = input.value.toLowerCase();
-
-    // Check if the input already exists in the list
-    for (const li of listItems) {
-        if (li.textContent.toLowerCase() === inputLowercase) {
-            alert("Chapter already added");
-            input.value = '';
-            input.focus();
-            return;
-        }
-    }
 
     // if list has more than 10 items, alert the user
     if (listItems.length > 10) {
@@ -127,6 +115,9 @@ function handleInput() {
             li.append(deleteButton);
             li.append(link);
             list.appendChild(li);
+
+            // append the chapter to the addedChapters array
+            addedChapters.push(input.value);
 
             // Clear the input and focus it
             input.value = '';
