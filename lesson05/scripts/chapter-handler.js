@@ -54,7 +54,7 @@ function handleInput() {
     inputBookWihtoutChapter = inputBookWihtoutChapter.replace(/\s/g, '');
 
     bookList.forEach((book) => {
-        // if it's book wihtout chapter
+        // if it's book wihtout chapter Ex: Enos
         if (!book.section) {
             title = book.content.title;
             url = book.content.uri;
@@ -72,6 +72,11 @@ function handleInput() {
 
 
         if (inputBookWihtoutChapter === titleLowercase) {
+            const li = document.createElement('li');
+            const deleteButton = document.createElement('button')
+            const link = document.createElement('a');
+            createEventListeners();
+
             if (!book.section) {
                 url = url;
                 li.textContent = title;
@@ -90,17 +95,17 @@ function handleInput() {
                 li.textContent = chapters[chapterNumberInput].content.title;
             }
 
-            const li = document.createElement('li');
-            const deleteButton = document.createElement('button')
-            const link = document.createElement('a');
-            createEventListeners();
-
+            // Set the values
             link.href = `https://www.churchofjesuschrist.org/study/${url}?lang=eng`;
             link.textContent = '🔗';
             deleteButton.textContent = '❌'
+
+            // Append the elements
             li.append(deleteButton)
             li.append(link);
             list.appendChild(li)
+
+            // Clear the input and focus it
             input.value = '';
             return input.focus()
 
