@@ -22,13 +22,13 @@ button.addEventListener('click', () => {
 function handleInput() {
     bookList.shift();
     bookList.forEach((book)=>{
-        title = book.content.section.title;
+        title = book.section.title;
         title = title.toLowerCase();
         input.value = input.value.toLowerCase();
         chapters = book.section.entries;
     
         if(title.includes(input.value)){
-            chapterInput = title.replace(/\D/g,'');
+            chapterInput = input.value.replace(/\D/g,'');
             chapterCount = chapters.length - 1;
            
             if(chapterInput > chapterCount){
