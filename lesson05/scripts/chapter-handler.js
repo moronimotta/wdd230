@@ -3,6 +3,7 @@ const button = document.querySelector("button");
 const list = document.getElementById("list");
 const li = document.createElement('li');
 const deleteButton = document.createElement('button')
+const link = document.createElement('a');
 
 
 deleteButton.addEventListener('click', () => {
@@ -74,9 +75,13 @@ function handleInput() {
                 return input.focus();
             } else {
                 // If the chapter exists, display it
-                li.textContent = chapter[chapterNumberInput].content.title;
+                let url = chapters[chapterNumberInput].content.uri;
+                li.textContent = chapters[chapterNumberInput].content.title;
+                link.href = `https://www.churchofjesuschrist.org/study/${url}?lang=eng`;
+                link.textContent = '🔗';
                 deleteButton.textContent = '❌'
                 li.append(deleteButton)
+                li.append(link);
                 list.append(li)
                 input.value = '';
                 input.focus()
