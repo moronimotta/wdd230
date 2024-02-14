@@ -40,16 +40,16 @@ function handleInput() {
         title = book.section.title;
 
         // Lowercase the title and the input value
-        title = title.toLowerCase();
+        titleLowercase = title.toLowerCase();
         input.value = input.value.toLowerCase();
 
         // Remove the chapter number from the input value
         inputBookWihtoutChapter = removeChapterNumber(input.value);
-        
+
         // Chapter Entries
         chapters = book.section.entries;
 
-        if(titleBookWithoutChapter === inputBookWihtoutChapter){
+        if(titleLowercase === inputBookWihtoutChapter){
             // Keeps only the number from the input value
             chapterInput = input.value.replace(/\D/g,'');
 
