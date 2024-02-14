@@ -1,10 +1,6 @@
 const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.getElementById("list");
-const li = document.createElement('li');
-const deleteButton = document.createElement('button')
-const link = document.createElement('a');
-
 
 deleteButton.addEventListener('click', () => {
     list.removeChild(li);
@@ -89,6 +85,10 @@ function handleInput() {
                 li.textContent = chapters[chapterNumberInput].content.title;
             }
 
+            const li = document.createElement('li');
+            const deleteButton = document.createElement('button')
+            const link = document.createElement('a');
+
             link.href = `https://www.churchofjesuschrist.org/study/${url}?lang=eng`;
             link.textContent = '🔗';
             deleteButton.textContent = '❌'
@@ -96,7 +96,7 @@ function handleInput() {
             li.append(link);
             list.appendChild(li)
             input.value = '';
-            input.focus()
+            return input.focus()
 
         }
     }
