@@ -22,45 +22,48 @@ function removeChapterNumber(inputString) {
     // Use a regular expression to match the second digit and space
     const regexWithChapter = /^(\d+\s\w+)\s\d+/;
     const regexWithoutChapter = /^(\w+)\s\d+/;
-    
+
     // Determine which regex to use based on the pattern
     const regexToUse = inputString.match(/^\d+/) ? regexWithChapter : regexWithoutChapter;
-    
+
     // Replace the matched pattern with the content of the capturing group
     const result = inputString.replace(regexToUse, '$1');
-  
+
     return result;
-  }
+}
 
 function handleInput() {
     // removes the first element of the array
     bookList.shift();
 
-    bookList.forEach((book)=>{
+    // Lowercase the input value
+    input.value = input.value.toLowerCase();
+
+    // Remove the chapter number from the input value
+    inputBookWihtoutChapter = removeChapterNumber(input.value);
+
+    bookList.forEach((book) => {
         title = book.section.title;
 
-        // Lowercase the title and the input value
+        // Lowercase the title
         titleLowercase = title.toLowerCase();
-        input.value = input.value.toLowerCase();
 
-        // Remove the chapter number from the input value
-        inputBookWihtoutChapter = removeChapterNumber(input.value);
 
         // Chapter Entries
         chapters = book.section.entries;
 
-        if(titleLowercase == inputBookWihtoutChapter){
+        if (titleLowercase.trim() === inputBookWihtoutChapter.trim()) {
             // Keeps only the number from the input value
-            chapterInput = input.value.replace(/\D/g,'');
+            chapterInput = input.value.replace(/\D/g, '');
 
             // Number of chapter is always one less than the length of the array
             chapterCount = chapters.length - 1;
-           
+
             // If the number of the chapter is greater than the number of chapters in the book, does not exist
-            if(chapterInput > chapterCount){
+            if (chapterInput > chapterCount) {
                 alert("Chapter not found");
                 return input.focus();
-            }else {
+            } else {
                 // If the chapter exists, display it
                 li.textContent = chapter[chapterInput].content.title;
                 deleteButton.textContent = '❌'
@@ -69,7 +72,7 @@ function handleInput() {
                 input.value = '';
                 input.focus()
             }
-           
+
         }
     }
     )
