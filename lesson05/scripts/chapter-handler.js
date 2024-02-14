@@ -7,6 +7,9 @@ const addedChapters = [];
 function createEventListeners(deleteButton, li) {
     deleteButton.addEventListener('click', () => {
         addedChapters.forEach((chapter) => {
+            // remove 🔗❌ 
+            li.textContent = li.textContent.replace('🔗', '');
+            li.textContent = li.textContent.replace('❌', '');
             if (chapter.replace(/\s/g, '').toLowerCase() === li.textContent.replace(/\s/g, '').toLowerCase()) {
                 addedChapters.splice(addedChapters.indexOf(chapter), 1);
             }
