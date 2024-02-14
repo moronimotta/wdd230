@@ -45,7 +45,7 @@ function handleInput() {
     input.value = input.value.toLowerCase();
 
     // Remove the chapter number from the input value
-    const { result: inputBookWihtoutChapter, chapter: chapterNumberInput } = removeChapterNumber(input.value);
+    let { result: inputBookWihtoutChapter, chapter: chapterNumberInput } = removeChapterNumber(input.value);
 
 
     // remove the blank spaces from the input value
