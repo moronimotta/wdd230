@@ -18,6 +18,20 @@ button.addEventListener('click', () => {
     handleInput();
 })
 
+function removeChapterNumber(inputString) {
+    // Use a regular expression to match the second digit and space
+    const regexWithChapter = /^(\d+\s\w+)\s\d+/;
+    const regexWithoutChapter = /^(\w+)\s\d+/;
+    
+    // Determine which regex to use based on the pattern
+    const regexToUse = inputString.match(/^\d+/) ? regexWithChapter : regexWithoutChapter;
+    
+    // Replace the matched pattern with the content of the capturing group
+    const result = inputString.replace(regexToUse, '$1');
+  
+    return result;
+  }
+
 function handleInput() {
     // removes the first element of the array
     bookList.shift();
@@ -30,8 +44,8 @@ function handleInput() {
         input.value = input.value.toLowerCase();
 
         // Remove the chapter number from the input value
-        inputBookWihtoutChapter = input.value.replace(/^(\d+\s\w+)\s\d+/, '');
-
+        inputBookWihtoutChapter = removeChapterNumber(input.value);
+        
         // Chapter Entries
         chapters = book.section.entries;
 
