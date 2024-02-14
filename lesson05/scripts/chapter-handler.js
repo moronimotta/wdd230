@@ -50,25 +50,18 @@ function handleInput() {
     if (listItems.length >= 10) {
         alert("You can't add more than 10 chapters");
         input.value = '';
-        return input.focus();
+        input.focus();
+        return;
     }
 
     // check if the input is already in the list
-    let isInputAlreadyInList = false;
-    if (listItems.length > 0) {
-        listItems.forEach((li) => {
-            if (li.textContent.toLowerCase() === input.value.toLowerCase()) {
-                isInputAlreadyInList = true;
-                alert("Chapter already added");
-                input.value = '';
-                input.focus();
-            }
-        });
-    }
-
-    // If the input is already in the list, return early
-    if (isInputAlreadyInList) {
-        return;
+    for (const li of listItems) {
+        if (li.textContent.toLowerCase() === input.value.toLowerCase()) {
+            alert("Chapter already added");
+            input.value = '';
+            input.focus();
+            return;
+        }
     }
 
     // Lowercase the input value
