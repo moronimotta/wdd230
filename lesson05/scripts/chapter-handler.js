@@ -6,8 +6,11 @@ const addedChapters = [];
 
 function createEventListeners(deleteButton, li) {
     deleteButton.addEventListener('click', () => {
-        // remove the chapter from the addedChapters array
-        addedChapters.splice(addedChapters.indexOf(li.textContent.toLowerCase()), 1);
+        addedChapters.forEach((chapter, index) => {
+            if (chapter.replace(/\s/g, '').toLowerCase() === li.textContent.replace(/\s/g, '').toLowerCase()) {
+                addedChapters.splice(index, 1);
+            }
+        });
         list.removeChild(li);
         input.focus();
     })
