@@ -56,7 +56,14 @@ function handleInput() {
     }
 
     // Lowercase the input value
-    input.value = input.value.toLowerCase();
+    input.value = input.value.toLowerCase();   
+    addedChapters.forEach((chapter) => {
+        if (chapter.replace(/\s/g, '') === input.value.replace(/\s/g, '')) {
+            alert("You can't add the same chapter more than once");
+            input.value = '';
+            return input.focus();
+        }
+    });
 
     // Remove the chapter number from the input value
     let { result: inputBookWihtoutChapter, chapter: chapterNumberInput } = removeChapterNumber(input.value);
