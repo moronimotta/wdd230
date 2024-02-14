@@ -55,7 +55,7 @@ function handleInput() {
     bookList.forEach((book) => {
         // if it's book wihtout chapter
         if (!book.section) {
-            title = book.title;
+            title = book.content.title;
         }else{
             title = book.section.title;
         }
