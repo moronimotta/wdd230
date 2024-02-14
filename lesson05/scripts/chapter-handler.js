@@ -49,12 +49,11 @@ function handleInput() {
     // Remove the chapter number from the input value
     let { result: inputBookWihtoutChapter, chapter: chapterNumberInput } = removeChapterNumber(input.value);
 
-
     // remove the blank spaces from the input value
     inputBookWihtoutChapter = inputBookWihtoutChapter.replace(/\s/g, '');
 
     bookList.forEach((book) => {
-        // if it's book wihtout chapter Ex: Enos
+        // if it's a book without chapter (e.g., "Enos")
         if (!book.section) {
             title = book.content.title;
             url = book.content.uri;
@@ -70,10 +69,9 @@ function handleInput() {
         // remove the blank spaces from the title
         titleLowercase = titleLowercase.replace(/\s/g, '');
 
-
         if (inputBookWihtoutChapter === titleLowercase) {
             const li = document.createElement('li');
-            const deleteButton = document.createElement('button')
+            const deleteButton = document.createElement('button');
             const link = document.createElement('a');
             createEventListeners(deleteButton);
 
@@ -86,8 +84,8 @@ function handleInput() {
                 chapterCount = chapters.length - 1;
 
                 // If the number of the chapter is greater than the number of chapters in the book, does not exist
-                if (chapterNumberInput > chapterCount) {
-                    alert("Chapter not found");
+                if (chapterNumberInput > chapterCount || chapterNumberInput < 0) {
+                    alert("Chapter not found or invalid chapter number");
                     return input.focus();
                 }
                 // If the chapter exists, display it
@@ -98,23 +96,23 @@ function handleInput() {
             // Set the values
             link.href = `https://www.churchofjesuschrist.org/study/${url}?lang=eng`;
             link.textContent = '🔗';
-            deleteButton.textContent = '❌'
+            deleteButton.textContent = '❌';
 
             // Append the elements
-            li.append(deleteButton)
+            li.append(deleteButton);
             li.append(link);
-            list.appendChild(li)
+            list.appendChild(li);
 
             // Clear the input and focus it
             input.value = '';
-            return input.focus()
-
+            input.focus();
+            return;
         }
-    }
-    )
-    alert("Book not found");
-    return input.focus();
+    });
 
+    alert("Book not found");
+    input.focus();
 }
+
 
 
