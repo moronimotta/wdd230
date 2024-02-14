@@ -82,7 +82,7 @@ function handleInput() {
                 deleteButton.textContent = '❌'
                 li.append(deleteButton)
                 li.append(link);
-                list.append(li)
+                list.appendChild(li)
                 input.value = '';
                 input.focus()
             }

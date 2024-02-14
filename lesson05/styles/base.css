@@ -32,11 +32,11 @@ button {
 	padding: 0.5rem;
 }
 
-button {
+button, a {
 	margin: 0.5rem;
 }
 
-.delete {
+.delete, a {
 	width: fit-content;
 }
 
