@@ -42,17 +42,23 @@ function handleInput() {
     // Remove the chapter number from the input value
     inputBookWihtoutChapter = removeChapterNumber(input.value);
 
+    // remove the blank spaces from the input value
+    inputBookWihtoutChapter = inputBookWihtoutChapter.replace(/\s/g, '');
+
     bookList.forEach((book) => {
         title = book.section.title;
 
         // Lowercase the title
         titleLowercase = title.toLowerCase();
 
+        // remove the blank spaces from the title
+        titleLowercase = titleLowercase.replace(/\s/g, '');
+
 
         // Chapter Entries
         chapters = book.section.entries;
 
-        if (titleLowercase.trim() === inputBookWihtoutChapter.trim()) {
+        if (inputBookWihtoutChapter === titleLowercase) {
             // Keeps only the number from the input value
             chapterInput = input.value.replace(/\D/g, '');
 
