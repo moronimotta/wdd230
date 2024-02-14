@@ -9,14 +9,15 @@ function createEventListeners() {
         input.focus();
     })
     
-    button.addEventListener('click', () => {
-        if (!input.value) {
-            alert("You cant submit a blank chapter")
-            return input.focus()
-        }
-        handleInput();
-    })
 }
+
+button.addEventListener('click', () => {
+    if (!input.value) {
+        alert("You cant submit a blank chapter")
+        return input.focus()
+    }
+    handleInput();
+})
 
 
 function removeChapterNumber(inputString) {
