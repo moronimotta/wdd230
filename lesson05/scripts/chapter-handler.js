@@ -2,18 +2,22 @@ const input = document.querySelector("#favchap");
 const button = document.querySelector("button");
 const list = document.getElementById("list");
 
-deleteButton.addEventListener('click', () => {
-    list.removeChild(li);
-    input.focus();
-})
 
-button.addEventListener('click', () => {
-    if (!input.value) {
-        alert("You cant submit a blank chapter")
-        return input.focus()
-    }
-    handleInput();
-})
+function createEventListeners() {
+    deleteButton.addEventListener('click', () => {
+        list.removeChild(li);
+        input.focus();
+    })
+    
+    button.addEventListener('click', () => {
+        if (!input.value) {
+            alert("You cant submit a blank chapter")
+            return input.focus()
+        }
+        handleInput();
+    })
+}
+
 
 function removeChapterNumber(inputString) {
     let chapter;
@@ -88,6 +92,7 @@ function handleInput() {
             const li = document.createElement('li');
             const deleteButton = document.createElement('button')
             const link = document.createElement('a');
+            createEventListeners();
 
             link.href = `https://www.churchofjesuschrist.org/study/${url}?lang=eng`;
             link.textContent = '🔗';
