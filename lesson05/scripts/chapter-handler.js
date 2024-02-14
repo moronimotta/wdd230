@@ -17,21 +17,11 @@ button.addEventListener('click', () => {
     }
 
     handleInput();
-
-    // li.textContent = input.value;
-    // deleteButton.textContent = '❌'
-    // li.append(deleteButton)
-
-    // list.append(li)
-
-    // input.value = '';
-    // input.focus()
-
 })
 
 function handleInput() {
+    bookList.shift();
     bookList.forEach((book)=>{
-
         title = book.content.section.title;
         title = title.toLowerCase();
         input.value = input.value.toLowerCase();
