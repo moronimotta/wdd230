@@ -21,22 +21,22 @@ button.addEventListener('click', () => {
 
 function removeChapterNumber(inputString) {
     let chapter;
-  
+
     // Use a regular expression to match the second digit and space
     const regexWithChapter = /^(\d+\s\w+)\s(\d+)/;
     const regexWithoutChapter = /^(\w+)\s(\d+)/;
-  
+
     // Determine which regex to use based on the pattern
     const regexToUse = inputString.match(/^\d+/) ? regexWithChapter : regexWithoutChapter;
-  
+
     // Replace the matched pattern with the content of the capturing group
     const result = inputString.replace(regexToUse, (_, book, ch) => {
-      chapter = parseInt(ch, 10);
-      return book;
+        chapter = parseInt(ch, 10);
+        return book;
     });
-  
+
     return { result, chapter };
-  }
+}
 
 function handleInput() {
     // removes the first element of the array
@@ -56,8 +56,11 @@ function handleInput() {
         // if it's book wihtout chapter
         if (!book.section) {
             title = book.content.title;
-        }else{
+            url = book.content.uri;
+        } else {
             title = book.section.title;
+            // Chapter Entries
+            chapters = book.section.entries;
         }
 
         // Lowercase the title
@@ -67,30 +70,33 @@ function handleInput() {
         titleLowercase = titleLowercase.replace(/\s/g, '');
 
 
-        // Chapter Entries
-        chapters = book.section.entries;
-
         if (inputBookWihtoutChapter === titleLowercase) {
-            // Number of chapter is always one less than the length of the array
-            chapterCount = chapters.length - 1;
+            if (!book.section) {
+                url = url;
+                li.textContent = title;
 
-            // If the number of the chapter is greater than the number of chapters in the book, does not exist
-            if (chapterNumberInput > chapterCount) {
-                alert("Chapter not found");
-                return input.focus();
             } else {
+                // Number of chapter is always one less than the length of the array
+                chapterCount = chapters.length - 1;
+
+                // If the number of the chapter is greater than the number of chapters in the book, does not exist
+                if (chapterNumberInput > chapterCount) {
+                    alert("Chapter not found");
+                    return input.focus();
+                }
                 // If the chapter exists, display it
-                let url = chapters[chapterNumberInput].content.uri;
+                url = chapters[chapterNumberInput].content.uri;
                 li.textContent = chapters[chapterNumberInput].content.title;
-                link.href = `https://www.churchofjesuschrist.org/study/${url}?lang=eng`;
-                link.textContent = '🔗';
-                deleteButton.textContent = '❌'
-                li.append(deleteButton)
-                li.append(link);
-                list.appendChild(li)
-                input.value = '';
-                input.focus()
             }
+
+            link.href = `https://www.churchofjesuschrist.org/study/${url}?lang=eng`;
+            link.textContent = '🔗';
+            deleteButton.textContent = '❌'
+            li.append(deleteButton)
+            li.append(link);
+            list.appendChild(li)
+            input.value = '';
+            input.focus()
 
         }
     }
