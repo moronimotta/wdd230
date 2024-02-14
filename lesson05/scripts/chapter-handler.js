@@ -46,6 +46,13 @@ function handleInput() {
     // get all li from list
     const listItems = list.querySelectorAll('li');
 
+    // if list has more than 10 items, alert the user
+    if (listItems.length >= 10) {
+        alert("You can't add more than 10 chapters");
+        input.value = '';
+        return input.focus();
+    }
+
     // check if the input is already in the list
     if (listItems.length > 0) {
         listItems.forEach((li) => {
