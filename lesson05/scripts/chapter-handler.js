@@ -32,7 +32,7 @@ button.addEventListener('click', () => {
 function handleInput() {
     bookList.forEach((book)=>{
 
-        title = book.section.title;
+        title = book.content.section.title;
         title = title.toLowerCase();
         input.value = input.value.toLowerCase();
         chapters = book.section.entries;
