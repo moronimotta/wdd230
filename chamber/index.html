@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
     content="Explore the official website of the Campos do Jordao Chamber of Commerce in Sao Paulo, Brazil. Gain insights into the economic and business landscape of this vibrant city nestled in the heart of nature. Discover valuable resources, events, and opportunities for businesses in Campos do Jordao. Your gateway to the thriving business community awaits!">
-<meta property="og:title" content="Chamber of Commerce">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://moronimotta.github.io/wdd230/chamber/images/chamber.jpg">
-<meta property="og:url" content="https://moronimotta.github.io/wdd230/chamber/">
+  <meta property="og:title" content="Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://moronimotta.github.io/wdd230/chamber/images/chamber.jpg">
+  <meta property="og:url" content="https://moronimotta.github.io/wdd230/chamber/">
 
-<meta name="author" content="Moroni Motta">
-<link rel="stylesheet" href="./styles/base.css">
-<link rel="stylesheet" href="./styles/normalize.css">
-<link rel="stylesheet" href="./styles/medium.css">
-<link rel="stylesheet" href="./styles/larger.css">
-<link rel="icon" href="favicon.ico">
-<title>Chamber of Commerce</title>
+  <meta name="author" content="Moroni Motta">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/medium.css">
+  <link rel="stylesheet" href="./styles/larger.css">
+  <link rel="icon" href="favicon.ico">
+  <title>Chamber of Commerce</title>
 </head>
 
 <body>
@@ -25,64 +25,93 @@
     <h1>Campos do Jordao Chamber of Commerce</h1>
     <p>"Where Business Meets Beauty!"</p>
     <button id="hamburgerMenu">&#8801;</button>
+    <label class="switch">
+      <input type="checkbox" id="modeButton">
+      <span class="slider round"></span>
+    </label>
   </header>
 
   <nav class="mainMenu">
     <a class="nav-item nav-link active" href="#">Link</a>
-  <a class="nav-item nav-link" href="#">Link</a>
-  <a class="nav-item nav-link" href="#">Link</a>
-  <div class="weather-container">
-    <span class="temperature">22°C</span>
-                <span class="weather-description">Partly Cloudy</span>
-  </div>
+    <a class="nav-item nav-link" href="#">Link</a>
+    <a class="nav-item nav-link" href="#">Link</a>
+    <div class="weather-container">
+      <span class="temperature">22°C</span>
+      <span class="weather-description">Partly Cloudy</span>
+    </div>
   </nav>
 
 
   <main>
     <div class="container">
-        <section>
-          <h2>Member spotlights</h2>
-          <h4>Maria</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
-          <h4>John</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
-          <h4>James</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
-        </section>
-        
-        <section>
-            <div class="card">
-                <img src="https://deseret.brightspotcdn.com/dims4/default/2b730c7/2147483647/strip/true/crop/1421x1066+23+0/resize/640x480!/format/webp/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FqMYLKULFKDK8gqfFj-Eci-wODRk%3D%2F0x0%3A1600x1066%2F1600x1066%2Ffilters%3Afocal%28734x523%3A735x524%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F23809398%2Fgirls_reading_book_mormon_1257152_print.jpeg" alt="placeholder image">
-                <h2>Services</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </section>
-    
-        <section>
-          <h2>Events</h2>
-          <h4>Event 1</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
-          <h4>Event 2</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
-          <h4>Event 3</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
-        </section>
-    
-        <section>
-            <div class="call-to-action">
-                <h2>Join the Chamber</h2>
-                <button>Join</button>
-            </div> 
-        </section>
+      <section>
+        <h2>Member spotlights</h2>
+        <h3>Maria</h3>
+        <p>As a dedicated member of Campos do Jordao Chamber of Commerce, Maria brings a wealth of experience in
+          [industry/business]. Her commitment to fostering collaboration and driving economic growth in our community is
+          truly commendable. Maria's innovative ideas and tireless efforts have played a significant role in shaping the
+          success of our chamber.</p>
+        <h3>John</h3>
+        <p>Meet John, a passionate advocate for local businesses in Campos do Jordao. With a background in
+          [industry/business], John has been a driving force behind several successful initiatives within the chamber.
+          His leadership and strategic vision have contributed significantly to the overall prosperity of our business
+          community.</p>
+        <h3>James</h3>
+        <p>James is a key player in Campos do Jordao's business landscape. With expertise in [industry/business], he has
+          consistently demonstrated a strong commitment to the chamber's mission. James's collaborative spirit and
+          forward-thinking approach have not only benefited his own business but have also inspired others to strive for
+          excellence in our thriving community.</p>
+      </section>
+
+      <section>
+        <div class="card">
+          <img
+            src="./images/camposdojordao.png"
+            alt="placeholder image">
+          <h2>Services</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Events</h2>
+        <h3>Campos do Jordao Winter Festival</h3>
+        <p>Join us for the enchanting Campos do Jordao Winter Festival, a celebration of art and music amidst the
+          stunning winter landscape. Experience world-class performances, indulge in local cuisine, and immerse yourself
+          in the vibrant cultural atmosphere. This event is a perfect blend of entertainment and the natural beauty that
+          Campos do Jordao has to offer.</p>
+        <h3>Spring Blossom Celebration</h3>
+        <p>Celebrate the arrival of spring in Campos do Jordao with our Spring Blossom Celebration. Enjoy a weekend
+          filled with colorful blooms, outdoor activities, and a festive atmosphere. Participate in flower exhibitions,
+          cultural performances, and explore the breathtaking scenery as the city comes alive with the beauty of
+          blooming flowers.</p>
+        <h3>Campos do Jordao Chocolate Festival</h3>
+        <p>Indulge your sweet tooth at the Campos do Jordao Chocolate Festival. Immerse yourself in a chocolate lover's
+          paradise, featuring artisanal chocolatiers, chocolate-themed workshops, and delectable treats from local
+          vendors. This event is a delightful celebration of the city's rich chocolate heritage, offering a sweet
+          experience for visitors of all ages.</p>
+      </section>
+
+      <section>
+        <div class="call-to-action">
+          <h2>Join the Chamber</h2>
+          <button>Join</button>
+        </div>
+      </section>
     </div>
   </main>
 
   <footer>
     <p id="currentYear"></p>
     <p id="lastModified"></p>
-    </footer>
-    <script src="./scripts/getdates.js"></script>
-    <script src="./scripts/hamburguerMenu.js"></script>
+  </footer>
+  <script src="./scripts/getdates.js"></script>
+  <script src="./scripts/hamburguerMenu.js"></script>
+  <script src="./scripts/darkModeToggle.js"></script>
 </body>
 
 </html>
