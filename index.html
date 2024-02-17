@@ -19,7 +19,7 @@
 </head>
 <body>
     <header>
-        <img src="./images/imageprofile.jpg" alt="Profile Image" style="width: 200px;">
+        <img src="./images/imageprofile.webp" alt="Profile Image" style="width: 200px;" id="profilepic">
         <h1>Moroni Motta</h1>
         <button id="hamburgerMenu">&#8801;</button> 
     </header>
@@ -33,6 +33,17 @@
         </ul>
     </nav>
     <main>
+
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 400px)" srcset="images/temple-400px.webp">
+                <source media="(max-width: 960px)" srcset="images/temple-960px.webp">
+                <img src="images/temple-960px.webp" alt="Nauvoo Temple" loading="lazy">
+            </picture>
+            <div class="herolabel">
+                <p>Nauvoo Temple</p>
+            </div>
+        </div>
         <h2>WDD 230: Web Frontend Development</h2>
         <div class="container">
             <section class="card">

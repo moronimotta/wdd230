@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -43,13 +44,10 @@ main h2 {
 nav {
     background-color: #5A5A5A;
     color: white;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
-header img {
-    padding: 10px;
-}	
 
 nav ul {
     display: flex;
@@ -109,3 +107,36 @@ footer {
     text-align: center;
 }
 
+
+.hero {
+    width: 100%;
+	margin: 10px auto;
+	position: relative;
+	border: 1px solid rgba(0,0,0,.1);
+	height: 300px;
+}
+
+.hero img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.herolabel {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	background: radial-gradient(#fff, #4D5B97);
+	border: 1px solid rgba(0,0,0,.75);
+	padding: 1.5rem;
+	box-shadow: 0 0 3rem #fff;
+	opacity: 0.75;
+}
+
+.herolabel p {
+	margin: 0;
+	padding: .25rem;
+	font-weight: 700;
+	font-size: 1.5rem;
+	font-family:"Great Vibes", serif;
+}
