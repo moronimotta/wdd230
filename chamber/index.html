@@ -36,13 +36,20 @@
     <a class="nav-item nav-link" href="#">Link</a>
     <a class="nav-item nav-link" href="#">Link</a>
     <div class="weather-container">
-      <span class="temperature">22°C</span>
-      <span class="weather-description">Partly Cloudy</span>
+      <span class="temperature">22&deg;</span>
+      <span class="windSpeed">Wind: 5mph</span>
+      <span class="windChill">Wind Chill: </span>
     </div>
   </nav>
 
-
   <main>
+    <div class="hero">
+      <picture>
+        <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+        <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+        <img src="images/hero-large.webp" alt="Business meeting" width="1890" height="1034">
+      </picture>
+    </div>
     <div class="container">
       <section>
         <h2>Member spotlights</h2>
@@ -65,9 +72,7 @@
 
       <section>
         <div class="card">
-          <img
-            src="./images/camposdojordao.png"
-            alt="placeholder image">
+          <img src="./images/camposdojordao.png" alt="placeholder image">
           <h2>Services</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -110,8 +115,9 @@
     <p id="lastModified"></p>
   </footer>
   <script src="./scripts/getdates.js"></script>
-  <script src="./scripts/hamburguerMenu.js"></script>
-  <script src="./scripts/darkModeToggle.js"></script>
+  <script src="./scripts/hamburguermenu.js"></script>
+  <script src="./scripts/darkmode.js"></script>
+  <script src="./scripts/windchill.js"></script>
 </body>
 
 </html>
