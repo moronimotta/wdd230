@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore the official website of the Campos do Jordao Chamber of Commerce in Sao Paulo, Brazil. Gain insights into the economic and business landscape of this vibrant city nestled in the heart of nature. Discover valuable resources, events, and opportunities for businesses in Campos do Jordao. Your gateway to the thriving business community awaits!">
+  <meta property="og:title" content="Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://moronimotta.github.io/wdd230/chamber/images/chamber.jpg">
+  <meta property="og:url" content="https://moronimotta.github.io/wdd230/chamber/">
+
+  <meta name="author" content="Moroni Motta">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/medium.css">
+  <link rel="stylesheet" href="./styles/larger.css">
+  <link rel="icon" href="favicon.ico">
+  <title>Chamber of Commerce</title>
+</head>
+
+<body>
+  <header>
+    <h1>Campos do Jordao Chamber of Commerce</h1>
+    <p>"Where Business Meets Beauty!"</p>
+    <button id="hamburgerMenu">&#8801;</button>
+    <label class="switch">
+      <input type="checkbox" id="modeButton">
+      <span class="slider round"></span>
+    </label>
+  </header>
+
+  <nav class="mainMenu">
+    <a class="nav-item nav-link active" href="#">Link</a>
+    <a class="nav-item nav-link" href="#">Link</a>
+    <a class="nav-item nav-link" href="#">Link</a>
+    <div class="weather-container">
+      <span class="temperature">22&deg;</span>
+      <span class="windSpeed">Wind: 5mph</span>
+      <span class="windChill">Wind Chill: </span>
+    </div>
+    <span id="visits"></span>
+  </nav>
+
+  <main>
+    <div id="container">
+      <section>
+        <div class="card">
+          <h2>Heading</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores unde inventore voluptate, dolor blanditiis libero alias modi enim hic, quo nemo maiores, sed velit vel nesciunt atque ut praesentium rem.</p>
+        </div>
+        <div class="card">
+          <h2>Heading</h2>
+          <img src="images/camposdojordao.png" alt="City Gate" title="City Gate">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores unde inventore voluptate, dolor blanditiis libero alias modi enim hic, quo nemo maiores, sed velit vel nesciunt atque ut praesentium rem.</p>
+        </div>
+        
+        
+      </section>
+      <section>
+        <picture>
+          <img src="images/discover/campos-image1.webp" alt="Water Fall" title="City Gate 1" loading="lazy" width="400" height="600">
+          <div class="captioncard">
+            <figcaption>Ducha de Prata - Water Fall</figcaption>
+          </div>
+        </picture>
+        <picture>
+          <img src="images/discover/campos-image2.webp" alt="City Gate 2" title="City Gate 2" loading="lazy" width="400" height="600">
+          <div class="captioncard">
+            <figcaption>Cable car - Morro do Elefante</figcaption>
+          </div>
+        </picture>
+        <picture>
+          <img src="images/discover/campos-image3.webp" alt="Train" title="City Gate 3" loading="lazy" width="400" height="600">
+          <div class="captioncard">
+            <figcaption>City train</figcaption>
+          </div>
+        </picture>
+        <picture>
+          <img src="images/discover/campos-image4.webp" alt="Downtown" title="City Gate 4" loading="lazy" width="400" height="600">
+          <div class="captioncard">
+            <figcaption>Downtown</figcaption>
+          </div>
+        </picture>
+        <picture>
+          <img src="images/discover/campos-image5.webp" alt="City Gate 5" title="City Gate 5" loading="lazy" width="400" height="600">
+          <div class="captioncard">
+            <figcaption>Big balloon ride</figcaption>
+          </div>
+        </picture>
+        <picture>
+          <img src="images/discover/campos-image6.webp" alt="City Gate 6" title="City Gate 6" loading="lazy" width="400" height="600">
+          <div class="captioncard">
+            <figcaption>Tree climbing</figcaption>
+          </div>
+        </picture>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p id="currentYear"></p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="./scripts/numberOfVisits.js"></script>
+  <script src="./scripts/getDates.js"></script>
+  <script src="./scripts/hamburguerMenu.js"></script>
+  <script src="./scripts/darkMode.js"></script>
+  <script src="./scripts/windChill.js"></script>
+</body>
+
+</html>

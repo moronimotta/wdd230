@@ -1,87 +1,87 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
-    --background-light: #ffffff;
-    --background-dark: #24292e;
-    --text-light: black;
-    --text-dark: #ffffff;
-    --nav-link-color-light: #6c757d;
-    --nav-link-color-dark: #1f2428;
+  --background-light: #ffffff;
+  --background-dark: #24292e;
+  --text-light: black;
+  --text-dark: #ffffff;
+  --nav-link-color-light: #6c757d;
+  --nav-link-color-dark: #1f2428;
 }
 
 * {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: var(--background-light);
+  background-color: var(--background-light);
 }
 
 .card {
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    padding: 1rem;
-    background-color: var(--background-light);
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1rem;
+  background-color: var(--background-light);
 }
 
-  .nav-item {
-    text-align: center;
-  }
-  
-  .nav-link {
-    padding: 0.5rem 1rem;
-    display: block;
-    text-decoration: none;
-    color: #6c757d;
-  }
-  
-  .nav-link.active, .nav-link:hover {
-    background-color: #ab191a;
-    color: #fff;
-  }
-  
+.nav-item {
+  text-align: center;
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
+  color: #6c757d;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background-color: #ab191a;
+  color: #fff;
+}
+
 main {
-    width: 80%;
-    margin: 0 auto;
-    gap: 20px;
-    /* display: grid; */
+  width: 80%;
+  margin: 0 auto;
+  gap: 20px;
+  /* display: grid; */
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .call-to-action {
-    background-image: url('../images/citygate.jpg');
-    background-size: cover;
-    background-position: center center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    width: 100%;
-    color: #fff;
-    text-shadow: 2px 2px 4px #000000;
+  background-image: url('../images/citygate.jpg');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  width: 100%;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .call-to-action button {
-    margin-left: 20px;
-    
+  margin-left: 20px;
+
 }
 
 section {
-    background-color: var(--background-light);
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    color: #ab191a;
+  background-color: var(--background-light);
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  color: #ab191a;
 }
 
 section p {
-    color: var(--text-light);
+  color: var(--text-light);
 }
 
 
@@ -98,100 +98,100 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 1rem; */
-    background-color: var(--background-light);
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    width: 80%;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1rem; */
+  background-color: var(--background-light);
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 80%;
+}
+
 
 footer {
-    background-color: #ab191a;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: 0.5rem;
+  background-color: #ab191a;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 .weather-container {
-    text-align: center;
-  }
-  
-  .temperature {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .weather-description {
-    color: var(--text-light);
-  }
+  text-align: center;
+}
 
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+.temperature {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.weather-description {
+  color: var(--text-light);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 
 body.dark-mode {
   background-color: var(--background-dark);
@@ -237,4 +237,37 @@ body.dark-mode .mainMenu span {
   color: var(--text-dark);
 }
 
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
+#container picture {
+  background: #000;
+  animation: fade 15s;
+}
+
+.captioncard {
+  background-color: #ab191a;
+  color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333;
+
+}
+
+figcaption {
+  font-size: smaller;
+}
+
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

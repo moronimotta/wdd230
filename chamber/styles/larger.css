@@ -1,71 +1,79 @@
 @media screen and (max-width: 767px) {
-  body {
-      margin: 0; 
-      overflow-x: hidden; 
-  }
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
 
-  nav {
-      flex-direction: column;
-      align-items: center;
-  }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  nav.active {
-      display: flex;
-  }
-  header {
-    flex-direction: column; /* Change flex-direction for smaller screens */
-    text-align: center; /* Center text within header */
-}
+    nav.active {
+        display: flex;
+    }
 
-  .card img {
-      height: auto;
-      width: 100%;
-      max-width: 100%; 
-  }
+    header {
+        flex-direction: column;
+        /* Change flex-direction for smaller screens */
+        text-align: center;
+        /* Center text within header */
+    }
 
-  nav a {
-      margin-bottom: 10px;
-  }
+    .card img {
+        height: auto;
+        width: 100%;
+        max-width: 100%;
+    }
 
-  #hamburgerMenu {
-      background-color: #ab191a;
-      color: white;
-      width: 40px;
-      display: block;
-      border: none;
-      cursor: pointer;
-      font-size: 30px;
-  }
+    nav a {
+        margin-bottom: 10px;
+    }
 
-  .mainMenu {
-      display: none;
-  }
+    #hamburgerMenu {
+        background-color: #ab191a;
+        color: white;
+        width: 40px;
+        display: block;
+        border: none;
+        cursor: pointer;
+        font-size: 30px;
+    }
 
-  section {
-      padding: 1rem;
-  }
+    .mainMenu {
+        display: none;
+    }
 
-  footer {
-      background-color: #ab191a;
-      color: white;
-      margin: 5px;
-      text-align: center;
-      width: 100%; 
-  }
+    section {
+        padding: 1rem;
+    }
+
+    footer {
+        background-color: #ab191a;
+        color: white;
+        margin: 5px;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 
 
 @media screen and (min-width: 768px) {
 
-  .mainMenu {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-  
+    #container picture:hover {
+        box-shadow: 0 0 10px #333;
+
+    }
+
+    .mainMenu {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+
 
     #hamburgerMenu {
         display: none;
@@ -73,7 +81,7 @@
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .container section:last-child {
@@ -84,15 +92,14 @@
         width: 90%;
         margin: 0 5% 0 5%;
         height: auto;
-      }
+    }
 
-      section {
+    section {
         padding: 1rem;
-      }
+    }
 
-      .card {
+    .card {
         width: 640px;
     }
-    
-}
 
+}
