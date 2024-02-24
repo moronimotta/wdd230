@@ -55,16 +55,16 @@
         text-align: center;
         width: 100%;
     }
+    
 }
 
 
 
 @media screen and (min-width: 768px) {
 
-    #container picture:hover {
+    .picture-card img:hover {
         box-shadow: 0 0 10px #333;
-
-    }
+      }
 
     .mainMenu {
 
