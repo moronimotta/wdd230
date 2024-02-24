@@ -258,8 +258,10 @@ body.dark-mode .mainMenu span {
 }
 
 
-figcaption {
+.captioncard p {
   font-size: smaller;
+  color: white;
+  text-align: center;
 }
 
 
