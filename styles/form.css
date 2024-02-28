@@ -1,19 +1,15 @@
-/* FILEPATH: /c:/Users/moron/OneDrive/Documentos/Programacao/BYU/Winter 2024/wdd230/styles/form.css */
 
-/* Define CSS variables */
 :root {
   --primary-color: #007bff;
   --secondary-color: #6c757d;
   --background-color: #f8f9fa;
 }
 
-/* Reset default form styles */
 form {
   margin: 0;
   padding: 0;
 }
 
-/* Apply common styles to form elements */
 form input,
 form textarea,
 form select {
@@ -29,7 +25,6 @@ form select {
   line-height: 1.5;
 }
 
-/* Style form labels */
 form label {
   display: block;
   margin-bottom: 0.5rem;
@@ -37,7 +32,6 @@ form label {
   font-weight: bold;
 }
 
-/* Style form buttons */
 form button {
   padding: 0.5rem 1rem;
   border: none;
@@ -49,5 +43,4 @@ form button {
   cursor: pointer;
 }
 
-/* Apply additional styles as needed */
 
