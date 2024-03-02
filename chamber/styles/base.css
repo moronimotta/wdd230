@@ -302,6 +302,11 @@ fieldset label {
 
 fieldset input {
   margin: 5px;
+  width: 15rem;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #ab191a;
+
 }
 
 button a {
