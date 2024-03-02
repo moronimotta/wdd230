@@ -237,6 +237,10 @@ body.dark-mode .mainMenu span {
   color: var(--text-dark);
 }
 
+body.dark-mode fieldset {
+  color: white;
+}
+
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -273,4 +277,34 @@ body.dark-mode .mainMenu span {
   100% {
     opacity: 1;
   }
+}
+.submitBtn {
+  background-color: #ab191a;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+fieldset {
+  border: 1px solid #ab191a;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  
+}
+
+fieldset label {
+  display: block;
+  margin: 1px;
+}
+
+
+fieldset input {
+  margin: 5px;
+}
+
+button a {
+  /* color: #fff; */
+  text-decoration: none;
 }

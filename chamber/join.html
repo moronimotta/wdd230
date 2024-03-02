@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Explore the official website of the Campos do Jordao Chamber of Commerce in Sao Paulo, Brazil. Gain insights into the economic and business landscape of this vibrant city nestled in the heart of nature. Discover valuable resources, events, and opportunities for businesses in Campos do Jordao. Your gateway to the thriving business community awaits!">
+  <meta property="og:title" content="Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://moronimotta.github.io/wdd230/chamber/images/chamber.jpg">
+  <meta property="og:url" content="https://moronimotta.github.io/wdd230/chamber/">
+
+  <meta name="author" content="Moroni Motta">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/medium.css">
+  <link rel="stylesheet" href="./styles/larger.css">
+  <link rel="icon" href="favicon.ico">
+  <title>Chamber of Commerce</title>
+</head>
+
+<body>
+  <header>
+    <h1>Campos do Jordao Chamber of Commerce</h1>
+    <p>"Where Business Meets Beauty!"</p>
+    <button id="hamburgerMenu">&#8801;</button>
+    <label class="switch">
+      <input type="checkbox" id="modeButton">
+      <span class="slider round"></span>
+    </label>
+  </header>
+
+  <nav class="mainMenu">
+    <a class="nav-item nav-link active" href="./index.html">Home</a>
+    <a class="nav-item nav-link" href="./discover.html">Discover</a>
+    <a class="nav-item nav-link" href="#">Link</a>
+    <div class="weather-container">
+      <span class="temperature">22&deg;</span>
+      <span class="windSpeed">Wind: 5mph</span>
+      <span class="windChill">Wind Chill: </span>
+    </div>
+  </nav>
+
+  <main>
+    <div id="container">
+
+      <section>
+  
+        <form action="thankyou.html" method="get" id="form">
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label class="top" for="name">Name: <input type="text" name="name" id="name" required></label>
+            <label class="top" for="lastName">Last Name: <input type="text" name="surname" id="surname" required></label>
+            <label class="top" for="email">Email: <input type="email" name="email" id="email" required></label>
+            <label class="top" for="phone">Phone: <input type="tel" name="phone" id="phone" required></label>
+          </fieldset>
+          <fieldset>
+            <legend>Business Information</legend>
+            <label class="top" for="business-name">Business/Organization Name: <input type="text" name="business-name"
+                id="business-name" pattern="(?=.*[ -])(?=.*[a-z]).{7,}"></label>
+            <label for="membership">Membership Level:</label>
+            <select name="membership" id="membership" required>
+              <option value="NP">NP</option>
+              <option value="Bronze">Bronze</option>
+              <option value="Silver">Silver</option>
+              <option value="Gold">Gold</option>
+            </select>
+            <label class="top" for="description">Description: <textarea name="description"
+                id="description"></textarea></label>
+          </fieldset>
+          <input type="hidden" name="time" id="time" value="">
+          <input type="submit" value="Submit" class="submitBtn">
+        </form>
+      </section>
+      <section>
+        <h2>Membership Level Benefits</h2>
+        <ul>
+          <li><p>NP Membership: Access to exclusive events and networking opportunities.</p></li>
+          <li><p>Bronze Membership: Enhanced visibility on our website and social media platforms.</p></li>
+          <li><p>Silver Membership: Priority access to business resources and workshops.</p></li>
+          <li><p>Gold Membership: Personalized business consultation and mentorship.</p></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p id="currentYear"></p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="./scripts/getDates.js"></script>
+  <script src="./scripts/hamburguerMenu.js"></script>
+  <script src="./scripts/darkMode.js"></script>
+  <script src="./scripts/windChill.js"></script>
+  <script src="./scripts/forms.js"></script>
+</body>
+
+</html>
