@@ -3,55 +3,91 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Form">
-    <meta name="author" content="Moroni Motta">
-    <link rel="stylesheet" href="./styles/base.css">
-    <link rel="stylesheet" href="./styles/form.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <meta name="author" content="Moroni Motta">
+    <meta name="description" content="Web Frontend Development course website">
+    <meta property="og:title" content="WDD230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://moronimotta.github.io/wdd230/joinville.jpg">
+    <meta property="og:url" content="https://moronimotta.github.io/wdd230/">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <!-- alternative way -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Moroni Motta - WDD 230 - Web Frontend Development</title>
 </head>
 
 <body>
-    <h1>Form</h1>
+    <header>
+        <img src="./images/imageprofile.webp" alt="Profile Image" style="width: 200px;" id="profilepic">
+        <h1>Moroni Motta</h1>
+        <button id="hamburgerMenu">&#8801;</button>
+    </header>
+    <nav class="mainMenu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="lesson03/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="chamber/">Chamber</a></li>
+            <li><a href="https://www.byui.edu" target="_blank">BYU-Idaho</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
+        </ul>
+    </nav>
     <main>
-        <form method="get" action="record.html">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+        <div class="container">
+            <div class="form-container">
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}"
-                title="Password must be at least 8 characters long and can only be alpha-numeric">
-
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required
-                oninput="checkPasswordMatch()">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
-                title="Please enter a valid email address">
-
-            <div id="rangevalue">0</div>
-            <label for="page-rating">Page Rating:</label>
-            <input type="range" id="r" name="r" min="0" max="10" value="0" step="1" list="rangevalues">
-            <datalist id="rangevalues">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </datalist>
-
-            <button type="submit">Submit</button>
-        </form>
+                <form id="registrationForm" method="get" action="record.html">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required pattern="[a-zA-Z0-9]{8,}"
+                        title="Password must be at least 8 characters long and can only be alpha-numeric">
+    
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required
+                        oninput="checkPasswordMatch()">
+                    <span id="password-match-message"></span>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required 
+                        title="Please enter a valid BYUI email address" oninput="validateEmail()" >
+                    <span id="email-validation-message"></span>
+    
+                    <div id="rangevalue">0</div>
+                    <label for="r">Page Rating:</label>
+                    <input type="range" id="r" name="r" min="0" max="10" value="0" step="1" list="rangevalues">
+                    <datalist id="rangevalues">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </datalist>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
 
     </main>
+    <footer>
+        <p id="currentYear"></p>
+        <p id="lastModified"></p>
+    </footer>
     <script src="./scripts/form.js"></script>
+    <script src="./scripts/getDates.js"></script>
+    <script src="./scripts/hamburgerMenu.js"></script>
+    <script src="./scripts/numberOfVisits.js"> </script>
 </body>
 
 </html>
