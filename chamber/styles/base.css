@@ -247,6 +247,18 @@ body.dark-mode fieldset {
   grid-template-columns: 1fr 1fr ;
 }
 
+#members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#members div {
+  margin-bottom: 5px;
+  text-align: center;
+  position: center;
+  
+}
 #container picture {
   background: #000;
   animation: fade 15s;

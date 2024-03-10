@@ -5,7 +5,7 @@
         "address": "123 Main Street, Campos do Jordão, SP",
         "phone": "+55 12 3456 7890",
         "website": "http://www.greenplanetfoundation.org",
-        "image": "greenplanet_logo.png",
+        "image": "https://media.istockphoto.com/id/1404294992/photo/generic-small-office-buildings-enterprise.jpg?s=612x612&w=0&k=20&c=i3DS7naGl13R9YOYdf-mwXiUjcd_lin48ttHpBHui-4=",
         "membership_level": "NP",
         "other_information": "A non-profit organization dedicated to environmental conservation and sustainability."
       },
@@ -14,7 +14,7 @@
         "address": "456 Oak Avenue, Campos do Jordão, SP",
         "phone": "+55 12 9876 5432",
         "website": "http://www.mountaineleganceretreat.com",
-        "image": "eleganceretreat_logo.png",
+        "image": "https://static01.nyt.com/images/2022/02/21/business/00tech-offices1/merlin_201807411_fcbafae1-0068-4b0e-b6e1-a0c6b6cbb798-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
         "membership_level": "Bronze",
         "other_information": "A bronze-level hospitality company providing luxury retreats amidst nature."
       },
@@ -23,7 +23,7 @@
         "address": "789 Pine Road, Campos do Jordão, SP",
         "phone": "+55 12 1234 5678",
         "website": "http://www.silverpeaksadventures.com",
-        "image": "silverpeaks_logo.png",
+        "image": "https://www.bdcnetwork.com/sites/default/files/201114_2999_Olympus_Project_N2.jpg",
         "membership_level": "Silver",
         "other_information": "Silver-level travel agency specializing in adventurous and scenic tours."
       },
@@ -32,7 +32,7 @@
         "address": "101 Cedar Street, Campos do Jordão, SP",
         "phone": "+55 12 3456 7890",
         "website": "http://www.goldenheightsresorts.com",
-        "image": "goldenheights_logo.png",
+        "image": "https://images.pexels.com/photos/416967/pexels-photo-416967.jpeg",
         "membership_level": "Gold",
         "other_information": "A gold-tier resort offering premium accommodations and top-notch amenities."
       },
@@ -41,7 +41,7 @@
         "address": "202 Maple Lane, Campos do Jordão, SP",
         "phone": "+55 12 9876 5432",
         "website": "http://www.explorenaturetech.com",
-        "image": "explorenaturetech_logo.png",
+        "image": "https://lh4.googleusercontent.com/1CeAGK_qYXUAy3ED6MiAoTuUwTKjQUH79UeQ7L3Og2hYQm8aRhpzAB70sytIlRFZc9vIU-rzjaCHEVJZOAsT_xIXIRduHzVJWuLZ0jQIPGYkdQiUzpjxW9QxgMGd-FgbBnl_GYRfYApwZOJTng",
         "membership_level": "NP",
         "other_information": "A non-profit tech company dedicated to developing solutions for environmental preservation."
       },
@@ -50,7 +50,7 @@
         "address": "303 Birch Boulevard, Campos do Jordão, SP",
         "phone": "+55 12 1234 5678",
         "website": "http://www.innovatehub.com",
-        "image": "innovatehub_logo.png",
+        "image": "https://www.digitaltrends.com/wp-content/uploads/2017/12/Bank-of-China-Tower-BOCHK.jpg?fit=1500%2C1000&p=1",
         "membership_level": "Silver",
         "other_information": "A silver-level innovation hub fostering creativity and technological advancements."
       },
@@ -59,7 +59,7 @@
         "address": "404 Elm Street, Campos do Jordão, SP",
         "phone": "+55 12 3456 7890",
         "website": "http://www.techscape.com",
-        "image": "techscape_logo.png",
+        "image": "https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/wp-cms/uploads/2021/03/i-1-architecture-most-innovative-companies-2021.jpg",
         "membership_level": "Gold",
         "other_information": "Gold-level technology company specializing in software solutions and digital landscapes."
       }
