@@ -1,0 +1,113 @@
+{
+    "lessons": [
+      {
+        "lesson": "02",
+        "links": [
+          {
+            "url": "./lesson02/design.html",
+            "title": "Design Activity"
+          },
+          {
+            "url": "./lesson02/media-query.html",
+            "title": "Media Query Activity"
+          },
+          {
+            "url": "./lesson02/design-principles.html",
+            "title": "Design Principles Activity"
+          }
+        ]
+      },
+      {
+        "lesson": "03",
+        "links": [
+          {
+            "url": "./lesson03/images/w3-schools=exercises.png",
+            "title": "W3 Exercises"
+          },
+          {
+            "url": "https://codepen.io/moronimotta/pen/OJqzpVL",
+            "title": "Code Pen"
+          },
+          {
+            "url": "https://codepen.io/moronimotta/pen/VwRypeq",
+            "title": "Responsive Menu"
+          },
+          {
+            "url": "./lesson03/chamber-site-plan.html",
+            "title": "Chamber Site Plan"
+          }
+        ]
+      },
+      {
+        "lesson": "04",
+        "links": [
+          {
+            "url": "https://codepen.io/moronimotta/pen/MWxQQPz",
+            "title": "Learning Activity 1"
+          }
+        ]
+      },
+      {
+        "lesson": "05",
+        "links": [
+          {
+            "url": "./lesson05/bom.html",
+            "title": "Book of Mormon Favorite Chapters"
+          }
+        ]
+      },
+      {
+        "lesson": "06",
+        "links": [
+          {
+            "url": "./images/landscape.webp",
+            "title": "WebP"
+          }
+        ]
+      },
+      {
+        "lesson": "07",
+        "links": [
+          {
+            "url": "./lazyload.html",
+            "title": "Lazy Load Kitten"
+          },
+          {
+            "url": "./lesson07/bom.html",
+            "title": "Local Storage BOM"
+          }
+        ]
+      },
+      {
+        "lesson": "08",
+        "links": [
+          {
+            "url": "./lesson08/tablebuild.html",
+            "title": "Tables"
+          },
+          {
+            "url": "./lesson08/index.html",
+            "title": "Form Tutorial"
+          },
+          {
+            "url": "./form.html",
+            "title": "Form Practice"
+          }
+        ]
+      },
+      {
+        "lesson": "09",
+        "links": [
+          {
+            "url": "./lesson09/new-ward-members.json",
+            "title": "New Ward Members JSON"
+          },
+          {
+            "url": "./lesson09/prophets.html",
+            "title": "Prophets JSON"
+          }
+        ]
+      }
+    ]
+  }
+  
