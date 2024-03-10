@@ -13,7 +13,7 @@ async function getLinks() {
     }
 }
 
-function displayLinks(weeks) {
+const displayLinks = (weeks) => {
     weeks.forEach((week) => {
         const weekContainer = document.createElement("div");
         weekContainer.classList.add("week-container");
