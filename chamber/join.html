@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./styles/medium.css">
   <link rel="stylesheet" href="./styles/larger.css">
   <link rel="icon" href="favicon.ico">
-  <title>Join - Chamber of Commerce</title>
+  <title>Chamber of Commerce</title>
 </head>
 
 <body>
@@ -32,9 +32,9 @@
   </header>
 
   <nav class="mainMenu">
-    <a class="nav-item nav-link active" href="./index.html">Home</a>
+    <a class="nav-item nav-link" href="./index.html">Home</a>
     <a class="nav-item nav-link" href="./discover.html">Discover</a>
-    <a class="nav-item nav-link" href="#">Link</a>
+    <a class="nav-item nav-link active"  href="#">Join</a>
     <div class="weather-container">
       <span class="temperature">22&deg;</span>
       <span class="windSpeed">Wind: 5mph</span>
@@ -44,32 +44,41 @@
 
   <main>
     <div id="container">
-
       <section>
         <h2>Join the Chamber of Commerce</h2>
         <form action="thankyou.html" method="get" id="form">
           <fieldset>
             <legend>Personal Information</legend>
             <label class="top" for="name">Name: <input type="text" name="name" id="name" required></label>
-            <label class="top" for="lastName">Last Name: <input type="text" name="surname" id="surname" required></label>
-            <label class="top" for="email">Email: <input type="email" name="email" id="email" required></label>
+            <label class="top" for="surname">Last Name: <input type="text" name="surname" id="surname" required></label>
+            <label class="top" for="email">Email: <input type="email" name="email" id="email" required placeholder="Enter your email"></label>
             <label class="top" for="phone">Phone: <input type="tel" name="phone" id="phone" required></label>
           </fieldset>
           <fieldset>
             <legend>Business Information</legend>
             <label class="top" for="business-name">Business/Organization Name: <input type="text" name="business-name"
-                id="business-name" pattern="(?=.*[ -])(?=.*[a-z]).{7,}"></label>
+              id="business-name" pattern="(?=.*[ -])(?=.*[a-z]).{7,}" required></label>
             <label for="membership">Membership Level:</label>
-            <select name="membership" id="membership" required>
-              <option value="" disabled selected>Select Membership Level</option>
-              <option value="NP">NP</option>
-              <option value="Bronze">Bronze</option>
-              <option value="Silver">Silver</option>
-              <option value="Gold">Gold</option>
-
-            </select>
-            <label class="top" for="description">Description: <input type="text" name="description" id="description"
-                pattern="(?=.*[ -])(?=.*[a-z]).{7,}"></label>
+              <label class="top" for="membership-np">
+                <input type="radio" name="membership" id="membership-np" value="NP" required>
+                NP
+              </label>
+              <label class="top" for="membership-bronze">
+                <input type="radio" name="membership" id="membership-bronze" value="Bronze" required>
+                Bronze
+              </label>
+              <label class="top" for="membership-silver">
+                <input type="radio" name="membership" id="membership-silver" value="Silver" required>
+                Silver
+              </label>
+              <label class="top" for="membership-gold">
+                <input type="radio" name="membership" id="membership-gold" value="Gold" required>
+                Gold
+              </label>
+              <fieldset>
+                <legend> Description</legend>
+                <textarea name="description" id="description" pattern="(?=.*[ -])(?=.*[a-z]).{7,}"></textarea>
+              </fieldset>
           </fieldset>
           <input type="hidden" name="time" id="time" value="">
           <input type="submit" value="Submit" class="submitBtn">
@@ -77,20 +86,33 @@
       </section>
       <section>
         <h2>Membership Level Benefits</h2>
-        <ul>
-          <li>
-            <p>NP Membership: Access to exclusive events and networking opportunities.</p>
-          </li>
-          <li>
-            <p>Bronze Membership: Enhanced visibility on our website and social media platforms.</p>
-          </li>
-          <li>
-            <p>Silver Membership: Priority access to business resources and workshops.</p>
-          </li>
-          <li>
-            <p>Gold Membership: Personalized business consultation and mentorship.</p>
-          </li>
-        </ul>
+        <table id="membership-tb">
+          <tr>
+            <th>Level</th>
+            <th>Price</th>
+            <th>Benefits</th>
+          </tr>
+          <tr>
+            <td>NP Membership</td>
+            <td>$10/month</td>
+            <td>Unlock a world of possibilities with access to exclusive events and high-profile networking opportunities. Stay connected with the pulse of the business community.</td>
+          </tr>
+          <tr>
+            <td>Bronze Membership</td>
+            <td>$50/month</td>
+            <td>Elevate your presence with enhanced visibility on our dynamic website and prominent positioning across our social media platforms. Showcase your business to a broader audience.</td>
+          </tr>
+          <tr>
+            <td>Silver Membership</td>
+            <td>$100/month</td>
+            <td>Catapult your success with priority access to an array of business resources and engaging workshops. Stay ahead of industry trends and expand your knowledge base through our exclusive offerings.</td>
+          </tr>
+          <tr>
+            <td>Gold Membership</td>
+            <td>$200/month</td>
+            <td>Ignite your business growth with personalized attention. Enjoy one-on-one business consultations and mentorship opportunities from industry leaders. Navigate challenges with confidence and achieve new heights.</td>
+          </tr>
+        </table>
       </section>
     </div>
   </main>
