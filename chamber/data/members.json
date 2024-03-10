@@ -1,0 +1,68 @@
+{
+    "companies": [
+      {
+        "name": "Green Planet Foundation",
+        "address": "123 Main Street, Campos do Jordão, SP",
+        "phone": "+55 12 3456 7890",
+        "website": "http://www.greenplanetfoundation.org",
+        "image": "greenplanet_logo.png",
+        "membership_level": "NP",
+        "other_information": "A non-profit organization dedicated to environmental conservation and sustainability."
+      },
+      {
+        "name": "Mountain Elegance Retreat",
+        "address": "456 Oak Avenue, Campos do Jordão, SP",
+        "phone": "+55 12 9876 5432",
+        "website": "http://www.mountaineleganceretreat.com",
+        "image": "eleganceretreat_logo.png",
+        "membership_level": "Bronze",
+        "other_information": "A bronze-level hospitality company providing luxury retreats amidst nature."
+      },
+      {
+        "name": "Silver Peaks Adventure Tours",
+        "address": "789 Pine Road, Campos do Jordão, SP",
+        "phone": "+55 12 1234 5678",
+        "website": "http://www.silverpeaksadventures.com",
+        "image": "silverpeaks_logo.png",
+        "membership_level": "Silver",
+        "other_information": "Silver-level travel agency specializing in adventurous and scenic tours."
+      },
+      {
+        "name": "Golden Heights Resorts",
+        "address": "101 Cedar Street, Campos do Jordão, SP",
+        "phone": "+55 12 3456 7890",
+        "website": "http://www.goldenheightsresorts.com",
+        "image": "goldenheights_logo.png",
+        "membership_level": "Gold",
+        "other_information": "A gold-tier resort offering premium accommodations and top-notch amenities."
+      },
+      {
+        "name": "ExploreNature Tech Solutions",
+        "address": "202 Maple Lane, Campos do Jordão, SP",
+        "phone": "+55 12 9876 5432",
+        "website": "http://www.explorenaturetech.com",
+        "image": "explorenaturetech_logo.png",
+        "membership_level": "NP",
+        "other_information": "A non-profit tech company dedicated to developing solutions for environmental preservation."
+      },
+      {
+        "name": "InnovateHub",
+        "address": "303 Birch Boulevard, Campos do Jordão, SP",
+        "phone": "+55 12 1234 5678",
+        "website": "http://www.innovatehub.com",
+        "image": "innovatehub_logo.png",
+        "membership_level": "Silver",
+        "other_information": "A silver-level innovation hub fostering creativity and technological advancements."
+      },
+      {
+        "name": "TechScape Solutions",
+        "address": "404 Elm Street, Campos do Jordão, SP",
+        "phone": "+55 12 3456 7890",
+        "website": "http://www.techscape.com",
+        "image": "techscape_logo.png",
+        "membership_level": "Gold",
+        "other_information": "Gold-level technology company specializing in software solutions and digital landscapes."
+      }
+    ]
+  }
+  
