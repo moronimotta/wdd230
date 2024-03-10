@@ -104,7 +104,10 @@ const displayMembersTable = (companies) => {
         row.appendChild(phone);
 
         const website = document.createElement("td");
-        website.textContent = member.website;
+        const link = document.createElement("a");
+        link.href = member.website;
+        link.textContent = "Visit Website";
+        website.appendChild(link);
         row.appendChild(website);
 
         const membershipLevel = document.createElement("td");
