@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="./styles/medium.css">
   <link rel="stylesheet" href="./styles/larger.css">
   <link rel="icon" href="favicon.ico">
-  <title>Chamber of Commerce</title>
+  <title>Join Us! - Chamber of Commerce</title>
 </head>
 
 <body>
@@ -44,7 +44,7 @@
   </nav>
 
   <main>
-    <div id="container">
+    <div id="container-join">
       <section>
         <h2>Join the Chamber of Commerce</h2>
         <form action="thankyou.html" method="get" id="form">
@@ -57,9 +57,10 @@
           </fieldset>
           <fieldset>
             <legend>Business Information</legend>
+            <label class="top" for="position">Position: <input type="text" name="position" id="position" pattern="[a-zA-Z\s-]{7,}" required></label>
             <label class="top" for="business-name">Business/Organization Name: <input type="text" name="business-name"
               id="business-name" pattern="(?=.*[ -])(?=.*[a-z]).{7,}" required></label>
-            <label for="membership">Membership Level:</label>
+            <label for="membership-np">Membership Level:</label>
               <label class="top" for="membership-np">
                 <input type="radio" name="membership" id="membership-np" value="NP" required>
                 NP
@@ -78,13 +79,14 @@
               </label>
               <fieldset>
                 <legend> Description</legend>
-                <textarea name="description" id="description" pattern="(?=.*[ -])(?=.*[a-z]).{7,}"></textarea>
-              </fieldset>
+                  <textarea name="description" id="description"></textarea>
+                </fieldset>
           </fieldset>
           <input type="hidden" name="time" id="time" value="">
           <input type="submit" value="Submit" class="submitBtn">
         </form>
       </section>
+
       <section>
         <h2>Membership Level Benefits</h2>
         <table id="membership-tb">
@@ -115,6 +117,7 @@
           </tr>
         </table>
       </section>
+    
     </div>
   </main>
 
