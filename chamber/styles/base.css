@@ -122,7 +122,7 @@ footer {
 }
 
 .weather-container {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .temperature {
@@ -240,6 +240,47 @@ body.dark-mode .mainMenu span {
 
 body.dark-mode fieldset {
   color: white;
+}
+
+body.dark-mode #weather-description {
+  color: white;
+}
+
+#bannerButton {
+ border: none;
+ background: none;
+ outline: none; 
+  float: right;
+}
+#forecast {
+  font-size: smaller;
+}
+
+#bannerButton:hover {
+  cursor: pointer;
+  background-color: #ab191936;
+}
+
+.banner {
+  color: #ab191a;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #333;
+  text-align: center;
+ 
+}
+
+#weather-icon{
+  width: 40px;
+  height: 40px;
+  /* float: left; */
+
+}
+
+#weather-description {
+  font-size: 13px;
+
 }
 
 #container {

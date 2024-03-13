@@ -37,10 +37,11 @@
     <a class="nav-item nav-link" href="./join.html">Join</a>
     <a class="nav-item nav-link" href="./directory.html">Directory</a>
     <div class="weather-container">
-      <span class="temperature">22&deg;</span>
-      <span class="windSpeed">Wind: 5mph</span>
-      <span class="windChill">Wind Chill: </span>
-    </div>
+      <span id="current-temp" class="temperature"></span>
+      <img id="weather-icon" class="weather-icon" alt="">
+      <figcaption id="weather-description" class="weather-description"></figcaption>
+      <div id="forecast"></div>
+  </div>
   </nav>
 
   <main>
@@ -111,7 +112,7 @@
   <script src="./scripts/numberOfVisits.js"></script>
   <script src="./scripts/getDates.js"></script>
   <script src="./scripts/hamburguerMenu.js"></script>
-  <script src="./scripts/darkMode.js"></script>
+  <script src="./scripts/darkMode.js"></script><script src="./scripts/weather.js"></script>
   <script src="./scripts/windChill.js"></script>
 </body>
 

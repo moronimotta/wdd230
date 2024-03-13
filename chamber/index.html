@@ -37,10 +37,11 @@
     <a class="nav-item nav-link" href="./join.html">Join</a>
     <a class="nav-item nav-link" href="./directory.html">Directory</a>
     <div class="weather-container">
-      <span class="temperature">22&deg;</span>
-      <span class="windSpeed">Wind: 5mph</span>
-      <span class="windChill">Wind Chill: </span>
-    </div>
+      <span id="current-temp" class="temperature"></span>
+      <img id="weather-icon" class="weather-icon" alt="">
+      <figcaption id="weather-description" class="weather-description"></figcaption>
+      <div id="forecast"></div>
+  </div>
   </nav>
 
   <main>
@@ -51,6 +52,14 @@
         <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
         <img src="images/hero-large.webp" alt="Business meeting" width="1890" height="1034">
       </picture>
+    </div>
+    
+    <div class="banner">
+      
+      <button id="bannerButton">❌</button>
+      <h2>Join us for the Chamber of Commerce Meet and Greet!</h2>
+      <p>Wednesday at 7:00 p.m.</p>
+
     </div>
     
     <div class="container">
@@ -118,8 +127,9 @@
   </footer>
   <script src="./scripts/getDates.js"></script>
   <script src="./scripts/hamburguerMenu.js"></script>
-  <script src="./scripts/darkMode.js"></script>
+  <script src="./scripts/darkMode.js"></script><script src="./scripts/weather.js"></script>
   <script src="./scripts/windChill.js"></script>
+  <script src="./scripts/banner.js"></script>
 </body>
 
 </html>
