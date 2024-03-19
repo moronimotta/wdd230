@@ -122,11 +122,21 @@
 
     .mainMenu {
 
-        display: flex;
         justify-content: space-between;
+        display: flex;
         align-items: center;
         padding: 1rem;
     }
+
+   #services-section {
+    position: sticky;
+    top: 10px;
+   }
+
+   .container section {
+    position: sticky;
+    /* top: 10px; */
+   }
 
 
     #hamburgerMenu {
@@ -138,8 +148,11 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .container section:last-child {
-        grid-column: 1 / 4;
+    .call-to-action {
+         margin: 5px;
+         text-align: center;
+         align-items: center;
+         display: flex;
     }
 
     .card img {
