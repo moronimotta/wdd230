@@ -19,24 +19,19 @@ async function getMembers() {
 getMembers();
 
 function displayRandomMembers(data) {
-    // select the spotlights section
     const spotlights = document.querySelector("#spotlights-section");
-    // select the companies array from dataStored
     const companies = data;
-    // create an array to store the random members
     const randomMembers = [];
-    // create a while loop to select 3 random members
+
     while (randomMembers.length < 3) {
         const randomIndex = Math.floor(Math.random() * companies.length);
         if (randomMembers.indexOf(companies[randomIndex]) === -1) {
             randomMembers.push(companies[randomIndex]);
         }
     }
-    // create a h2 element
     const title = document.createElement("h2");
     title.textContent = "Member spotlights";
     spotlights.appendChild(title);
-    // create a loop to display the random members
     randomMembers.forEach((member) => {
         const name = document.createElement("h3");
         name.textContent = member.name;
