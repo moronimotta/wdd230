@@ -7,7 +7,6 @@ let now = Date.now();
 let oneDay = 24 * 60 * 60 * 1000; 
 
 if (!numVisits) {
-  alert("Welcome! Let us know if you have any questions.");
   visitsDisplay.textContent = 'Welcome! Enjoy your first visit!';
 } else if (now - lastVisit < oneDay) {
   visitsDisplay.textContent = 'Back so soon! Awesome!';
