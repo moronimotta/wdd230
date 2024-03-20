@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
@@ -10,6 +9,7 @@ iframe {
 * {
     font-family: 'Roboto', sans-serif;
 }
+
 .maps {
     width: 100%;
     margin: 5px;
@@ -33,17 +33,21 @@ header {
     color: white;
     width: 80%;
     margin: 0 auto;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-main h2 {
+
+h2,
+h3 {
     text-align: center;
     background-color: #006eb6;
     padding: 10px;
     color: white;
+    margin-top: 0;
+    font-size: 1 em;
 }
 
 nav {
@@ -81,22 +85,14 @@ ul {
 }
 
 .card:nth-child(even) {
-    position: sticky; top: 5px; height: 300px;
+    text-align: center;
+    top: 5px;
+    height: 300px;
 }
 
 .card li::before {
     content: "📌";
     padding-right: 10px;
-}
-
-.card h3 {
-    text-align: center;
-    background-color: #006eb6;
-    padding: 10px;
-    color: white;
-    margin: 0;
-    border-radius: 10px 10px 0 0;
-    height: 50px;
 }
 
 .card li {
@@ -119,35 +115,35 @@ footer {
 
 .hero {
     width: 100%;
-	margin: 10px auto;
-	position: relative;
-	border: 1px solid rgba(0,0,0,.1);
-	height: 300px;
+    margin: 10px auto;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .1);
+    height: 300px;
 }
 
 .hero img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .herolabel {
-	position: absolute;
-	top: 30px;
-	left: 30px;
-	background: radial-gradient(#fff, #4D5B97);
-	border: 1px solid rgba(0,0,0,.75);
-	padding: 1.5rem;
-	box-shadow: 0 0 3rem #fff;
-	opacity: 0.75;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: radial-gradient(#fff, #4D5B97);
+    border: 1px solid rgba(0, 0, 0, .75);
+    padding: 1.5rem;
+    box-shadow: 0 0 3rem #fff;
+    opacity: 0.75;
 }
 
 .herolabel p {
-	margin: 0;
-	padding: .25rem;
-	font-weight: 700;
-	font-size: 1.5rem;
-	font-family:"Great Vibes", serif;
+    margin: 0;
+    padding: .25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Great Vibes", serif;
 }
 
 .container .form-container {

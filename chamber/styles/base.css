@@ -46,12 +46,16 @@ main {
   width: 80%;
   margin: 0 auto;
   gap: 20px;
-  /* display: grid; */
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+.card figcaption {
+  text-align: center;
+  margin-top: 10px;
 }
 
 .call-to-action {
@@ -79,6 +83,7 @@ section {
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   color: #ab191a;
+  padding: 1rem;
 }
 
 section p {
@@ -100,7 +105,7 @@ header {
   color: white;
   text-shadow: 2px 2px 4px #000000;
   border-radius: 0.25rem;
-  filter: brightness(90%); /* Adjust the brightness value to make the image darker */
+  filter: brightness(90%); 
 }
 
 header p {
@@ -112,7 +117,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 1rem; */
   background-color: var(--background-light);
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
@@ -129,10 +133,6 @@ footer {
   padding: 20px;
   text-align: center;
   margin-top: 0.5rem;
-}
-
-.weather-container {
-  /* text-align: center; */
 }
 
 .temperature {
@@ -197,7 +197,6 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -300,8 +299,6 @@ body.dark-mode #weather-description {
 #weather-icon{
   width: 40px;
   height: 40px;
-  /* float: left; */
-
 }
 
 #weather-description {
@@ -367,7 +364,6 @@ body.dark-mode #weather-description {
 
 fieldset {
   border: 1px solid #ab191a;
-  border-radius: 10px;
   padding: 10px;
   margin: 10px;
   
@@ -381,28 +377,24 @@ fieldset label {
 
 
 form textarea {
-  margin: 5px;
   width: 15rem;
-  padding: 5px;
-  border-radius: 10px;
   border: 1px solid #ab191a;
 }
 
 form fieldset input[type="radio"] {
-  margin: 5px;
   width: 1rem;
-  padding: 5px;
-  border-radius: 10px;
   border: 1px solid #ab191a;
 }
 
-fieldset input {
+form fieldset input[type="radio"], fieldset input, fieldset, form textarea{
   margin: 5px;
-  width: 15rem;
   padding: 5px;
   border-radius: 10px;
-  border: 1px solid #ab191a;
+}
 
+fieldset input {
+  width: 15rem;
+  border: 1px solid #ab191a;
 }
 
 button a {

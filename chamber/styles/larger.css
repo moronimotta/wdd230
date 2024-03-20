@@ -50,22 +50,18 @@
     }
 
     table caption {
-        text-align: center; /* Center-align table caption */
+        text-align: center; 
         margin-bottom: 10px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
     }
 
     nav.active {
         display: flex;
     }
 
-    header {
+    header, nav {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .card img {
@@ -90,10 +86,6 @@
 
     .mainMenu {
         display: none;
-    }
-
-    section {
-        padding: 1rem;
     }
 
     footer {
@@ -135,7 +127,6 @@
 
    .container section {
     position: sticky;
-    /* top: 10px; */
    }
 
 
@@ -149,7 +140,6 @@
     }
 
     .call-to-action {
-         margin: 5px;
          text-align: center;
          align-items: center;
          display: flex;
@@ -159,10 +149,6 @@
         width: 90%;
         margin: 0 5% 0 5%;
         height: auto;
-    }
-
-    section {
-        padding: 1rem;
     }
 
     .card {

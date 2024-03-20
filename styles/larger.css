@@ -54,9 +54,6 @@
     header {
         background-color: #006eb6;
         color: white;
-        /* padding: 10px; */
-        /* width: 80%; */
-        /* margin: 0 auto; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -68,18 +65,21 @@
         width: 70%;
     }
 
-    main h2 {
+    h2,
+    h3 {
         text-align: center;
         background-color: #006eb6;
         padding: 10px;
         color: white;
+        margin-top: 0;
+        font-size: 1 em;
     }
+
 
     nav {
         background-color: #5A5A5A;
         color: white;
         width: 80%;
-        /* margin: 0 auto; */
     }
 
     header img {
@@ -112,15 +112,6 @@
 
     .container {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .card h3 {
-        text-align: center;
-        background-color: #006eb6;
-        padding: 10px;
-        color: white;
-        margin: 0;
-        border-radius: 10px 10px 0 0;
     }
 
     .card li {
