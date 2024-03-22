@@ -17,6 +17,22 @@ body {
   background-color: var(--background-light);
 }
 
+#windchill{
+  width: 100%;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+#windchill h2, label{
+  color: #ab191a;
+
+}
+
+#windchill input[type="number"] {
+ font-weight: bold;
+}
+
 .card {
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
