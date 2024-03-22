@@ -11,7 +11,6 @@ async function getMembers() {
         const response = await fetch(linksURL);
         const data = await response.json();
         dataStored.push(data);
-        console.log(data);
         displayMembers(data.companies);
     } catch (error) {
         console.error(error);

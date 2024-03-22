@@ -11,7 +11,6 @@ async function apiFetch() {
     try {
         const response = await fetch(url);
             const data = await response.json();
-            console.log(data);
             displayResults(data);
             displayForecast(data.list);
         
@@ -36,7 +35,6 @@ function displayForecast(forecastData) {
         const forecast = forecastData[i];
         nextDays.push(forecast.main.temp);
     }
-    console.log(nextDays);
     const displayForecast = `Next 3 days: <strong>${nextDays[0]}°F</strong> | <strong>${nextDays[1]}°F</strong> | <strong>${nextDays[2]}°F</strong>`;
     const forecastContainer = document.querySelector('#forecast');
     forecastContainer.innerHTML = displayForecast;
