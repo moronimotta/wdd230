@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoots Island Rentals</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Welcome to Scoots Island Rentals</h1>
         <p>Make your reservation now!</p>
-        <a href="#reservation">Reserve Now</a>
+        <a href="./reservations.html">Reserve Now</a>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#rentals">Rentals</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./rentals.html">Rentals</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -26,7 +28,7 @@
         <p>Summary information about all the types of rentals goes here.</p>
     </section>
 
-<!-- Use a lazy loading technique to support progressive design.
+    <!-- Use a lazy loading technique to support progressive design.
  -->
 
     <section id="weather">
@@ -41,6 +43,11 @@
             <p>Temperature at 3:00pm: <span id="forecast-temp"></span></p>
         </div>
     </section>
+    <section id="message">
+        <p>Today's high temperature: <span id="temp-max"></span></p>
+        <button id="close-message">Close</button>
+    </section>
+
 
     <section id="social-media">
         <h2>Connect with Us</h2>
@@ -49,15 +56,11 @@
         <a href="https://www.instagram.com/scootsrentals">Instagram</a>
     </section>
 
-    <section id="message">
-        <p>Today's high temperature: <span id="temp-max"></span></p>
-        <button id="close-message">Close</button>
-    </section>
-
     <footer>
         <p>&copy; 2024 Scoots Island Rentals. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./scripts/weather.js"></script>
 </body>
+
 </html>

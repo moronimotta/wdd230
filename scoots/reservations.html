@@ -21,14 +21,14 @@
     <header>
         <h1>Welcome to Scoots Island Rentals</h1>
         <p>Make your reservation now!</p>
-        <a href="#reservation">Reserve Now</a>
+        <a href="./reservations.html">Reserve Now</a>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#rentals">Rentals</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./rentals.html">Rentals</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -52,36 +52,28 @@
             <label for="agreement">I have read and agree to the terms and conditions:</label>
             <input type="checkbox" id="agreement" name="agreement" required onchange="unlockForm()">
         </section>
-    
+
         <section>
-    
-            <form method="POST" id="reservation-form">
+
+            <form method="POST" id="reservation-form" disabled>
                 <fieldset>
                     <legend>Rental Details</legend>
-                    <label for="date">Departure Date:</label>
-                    <input type="date" id="dp-date" name="date" required>
-            
-                    <label for="return-date">Return Date:</label>
-                    <input type="date" id="rt-date" name="return-date" required>
-            
-                    <label for="period">Period:</label>
-                    <select id="period" name="period" required>
-                        <option value="morning">Morning</option>
-                        <option value="afternoon">Afternoon</option>
-                        <option value="full-day">Full Day</option>
-                    </select>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
 
                     <h3>Rental Type:</h3>
                     <label for="scooter-checkbox">
-                        <input type="radio" id="scooter-checkbox" name="motorType" value="scooter" onclick="selectMotor('scooter')">
+                        <input type="radio" id="scooter-checkbox" name="motorType" value="scooter"
+                            onclick="selectMotor('scooter')">
                         <img src="./images/scooter.png" alt="Scooter" class="motor-icon">
                     </label>
-            
+
                     <label for="jeep-checkbox">
-                        <input type="radio" id="jeep-checkbox" name="motorType" value="jeep" onclick="selectMotor('jeep')">
+                        <input type="radio" id="jeep-checkbox" name="motorType" value="jeep"
+                            onclick="selectMotor('jeep')">
                         <img src="./images/jeep.png" alt="Jeep" class="motor-icon">
                     </label>
-            
+
                     <label for="atv-checkbox">
                         <input type="radio" id="atv-checkbox" name="motorType" value="atv" onclick="selectMotor('atv')">
                         <img src="./images/atv.png" alt="ATV" class="motor-icon">
@@ -89,63 +81,62 @@
 
                     <label for="model-type">Model Type:</label>
                     <select id="model-type" name="model-type" required>
-                    
+
                     </select>
-            
+
+                    <label for="period">Period:</label>
+                    <select id="period" name="period" required>
+                        <option value="half-day">Half Day</option>
+                        <option value="full-day">Full Day</option>
+                    </select>
+
                     <label for="number">Number of Rentals:</label>
-                    <input type="number" id="number" name="number" required placeholder="Enter the number of rentals">
-            
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                    <input type="number" id="number" name="number" required placeholder="Enter the number of rentals"
+                        min="1">
+
+                    <button type="button" onclick="confirmDetails()">Confirm Details</button>
+                    <fieldset id="totalFieldset" style="display: none;">
+                        <legend>Total Cost</legend>
+                        <p id="total-cost">Total: $0</p>
+                    </fieldset>
+
                 </fieldset>
-            
+
                 <fieldset>
                     <legend>Customer Information</legend>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your name">
-            
+
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" placeholder="Enter your email">
-            
+                    <input type="email" id="email" name="email" required
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" placeholder="Enter your email">
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
                     <label for="home-location">Home State or Country:</label>
-                    <input type="text" id="home-location" name="home-location" required placeholder="Enter your home state or country">
-            
+                    <input type="text" id="home-location" name="home-location" required
+                        placeholder="Enter your home state or country">
+
                     <label for="cruise-line">Cruise Line (if applicable):</label>
                     <select id="cruise-line" name="cruise-line">
                         <option value="">Select Cruise Line</option>
                         <option value="Carnival">Carnival</option>
                         <option value="Royal Caribbean">Royal Caribbean</option>
                         <option value="Norwegian Cruise Line">Norwegian Cruise Line</option>
-                        <!-- Add more cruise line options as needed -->
                     </select>
-            
+
                     <label for="accommodations">Special Accommodations/Comments:</label>
-                    <textarea id="accommodations" name="accommodations" placeholder="Enter any special accommodations or comments"></textarea>
+                    <textarea id="accommodations" name="accommodations"
+                        placeholder="Enter any special accommodations or comments"></textarea>
                 </fieldset>
-            
-                <fieldset>
-                    <legend>Additional Options</legend>
-                    <label for="damage-insurance">Damage Insurance:</label>
-                    <select id="damage-insurance" name="damage-insurance">
-                        <option value="none">None</option>
-                        <option value="basic">Basic Coverage</option>
-                        <option value="premium">Premium Coverage</option>
-                    </select>
-            
-                    
-            
-                    </div>
-                </fieldset>
-            
-                <fieldset>
-                    <legend>Total Cost</legend>
-                    <p id="total-cost">Total: $0</p>
-                </fieldset>
-            
+
+
+
                 <input type="hidden" id="selectedType" name="selectedType">
                 <input type="submit" value="Submit Reservation">
             </form>
-            
+
         </section>
     </div>
 
