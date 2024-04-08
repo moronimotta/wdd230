@@ -8,7 +8,7 @@ async function getRentals() {
         const response = await fetch(linksURL);
         const data = await response.json();
         dataStored.push(data);
-        displayRentals(data.rentals);
+        displayRentals(data);
     } catch (error) {
         console.error(error);
     }
@@ -16,34 +16,31 @@ async function getRentals() {
 
 getRentals();
 
-const displayRentals = (rentals) => {
-    const rentalData = rentals["Max Rental Pricing"]["Rental Type"];
-    const table = document.createElement("table");
-
-    const section = document.getElementsByTagName("section")[0];
-
-    for (const rental in rentalData) {
-        const rentalInfo = rentalData[rental];
-        const row = document.createElement("tr");
-
-        const rentalTypeCell = document.createElement("td");
-        rentalTypeCell.textContent = rental;
-        row.appendChild(rentalTypeCell);
-
-        const maxPersonsCell = document.createElement("td");
-        maxPersonsCell.textContent = rentalInfo["Max. Persons"];
-        row.appendChild(maxPersonsCell);
-
-        const halfDayCell = document.createElement("td");
-        halfDayCell.textContent = rentalInfo["Half Day (3 hrs)"];
-        row.appendChild(halfDayCell);
-
-        const fullDayCell = document.createElement("td");
-        fullDayCell.textContent = rentalInfo["Full Day"];
-        row.appendChild(fullDayCell);
-
-        table.appendChild(row);
-    }
-
-    section.appendChild(table);
+function displayRentals(data) {
+    const rentals = data.rentals;
+    const table = document.querySelector('.rentals-table');
+    const tbody = document.createElement('tbody');
+    rentals.forEach(rental => {
+        const row = document.createElement('tr');
+        const type = document.createElement('td');
+        const maxPersons = document.createElement('td');
+        const reservation = document.createElement('td');
+        const walkIn = document.createElement('td');
+        const halfDay = document.createElement('td');
+        const fullDay = document.createElement('td');
+        type.textContent = rental.type;
+        maxPersons.textContent = rental.maxPersons;
+        reservation.textContent = rental.reservation;
+        walkIn.textContent = rental.walkIn;
+        halfDay.textContent = rental.halfDay;
+        fullDay.textContent = rental.fullDay;
+        row.appendChild(type);
+        row.appendChild(maxPersons);
+        row.appendChild(reservation);
+        row.appendChild(walkIn);
+        row.appendChild(halfDay);
+        row.appendChild(fullDay);
+        tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
 }
