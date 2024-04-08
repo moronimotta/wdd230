@@ -17,30 +17,32 @@ async function getRentals() {
 getRentals();
 
 function displayRentals(data) {
-    const rentals = data.rentals;
-    const table = document.querySelector('.rentals-table');
-    const tbody = document.createElement('tbody');
-    rentals.forEach(rental => {
-        const row = document.createElement('tr');
-        const type = document.createElement('td');
-        const maxPersons = document.createElement('td');
-        const reservation = document.createElement('td');
-        const walkIn = document.createElement('td');
-        const halfDay = document.createElement('td');
-        const fullDay = document.createElement('td');
-        type.textContent = rental.type;
-        maxPersons.textContent = rental.maxPersons;
-        reservation.textContent = rental.reservation;
-        walkIn.textContent = rental.walkIn;
-        halfDay.textContent = rental.halfDay;
-        fullDay.textContent = rental.fullDay;
-        row.appendChild(type);
-        row.appendChild(maxPersons);
-        row.appendChild(reservation);
-        row.appendChild(walkIn);
-        row.appendChild(halfDay);
-        row.appendChild(fullDay);
-        tbody.appendChild(row);
+    const table = document.createElement("table");
+    const tableHeader = document.createElement("thead");
+    const tableBody = document.createElement("tbody");
+
+    const headerRow = document.createElement("tr");
+    const headers = ["ID", "Name", "Max Persons", "Half Day Price", "Full Day Price"];
+    headers.forEach((header) => {
+        const th = document.createElement("th");
+        th.textContent = header;
+        headerRow.appendChild(th);
     });
-    table.appendChild(tbody);
+    tableHeader.appendChild(headerRow);
+    table.appendChild(tableHeader);
+
+    data.rentals.forEach((rental) => {
+        const row = document.createElement("tr");
+        const { id, name, maxPersons, halfDayPrice, fullDayPrice } = rental;
+        const rowData = [id, name, maxPersons, halfDayPrice, fullDayPrice];
+        rowData.forEach((data) => {
+            const td = document.createElement("td");
+            td.textContent = data;
+            row.appendChild(td);
+        });
+        tableBody.appendChild(row);
+    });
+    table.appendChild(tableBody);
+
+    document.getElementsByTagName("section")[0].appendChild(table);
 }

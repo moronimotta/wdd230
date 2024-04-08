@@ -3,6 +3,7 @@
         {
             "id": 1,
             "name": "Honda Metro Scooter",
+            "type": "scooter",
             "maxPersons": 1,
             "halfDayPrice": 20,
             "fullDayPrice": 30
@@ -10,6 +11,7 @@
         {
             "id": 2,
             "name": "Honda Dio Scooter",
+            "type": "scooter",
             "maxPersons": 2,
             "halfDayPrice": 30,
             "fullDayPrice": 40
@@ -17,6 +19,7 @@
         {
             "id": 3,
             "name": "Honda PCX150 Scooter",
+            "type": "scooter",
             "maxPersons": 2,
             "halfDayPrice": 40,
             "fullDayPrice": 50
@@ -24,6 +27,7 @@
         {
             "id": 4,
             "name": "Honda Pioneer ATV",
+            "type": "atv",
             "maxPersons": 4,
             "halfDayPrice": 50,
             "fullDayPrice": 70
@@ -31,6 +35,7 @@
         {
             "id": 5,
             "name": "Jeep Wrangler - 4 door with a/c",
+            "type": "jeep",
             "maxPersons": 5,
             "halfDayPrice": 70,
             "fullDayPrice": 100
@@ -38,10 +43,10 @@
         {
             "id": 6,
             "name": "Jeep Wrangler - 2 door",
+            "type": "jeep",
             "maxPersons": 4,
             "halfDayPrice": 60,
             "fullDayPrice": 85
         }
     ]
-
 }
