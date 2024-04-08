@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Moroni Motta">
+    <meta name="description" content="Web Frontend Development course website">
+    <meta property="og:title" content="WDD230 - Web Frontend Development">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://moronimotta.github.io/wdd230/joinville.jpg">
+    <meta property="og:url" content="https://moronimotta.github.io/wdd230/">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <!-- alternative way -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Moroni Motta - WDD 230 - Web Frontend Development</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Scoots Island Rentals</h1>
+        <p>Make your reservation now!</p>
+        <a href="#reservation">Reserve Now</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rentals">Rentals</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Phone: 123-456-7890</p>
+            <p>Email: info@scootsrentals.com</p>
+            <p>Address: 123 Scoots Street, Cozumel</p>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.9034529226396!2d-86.94885111212834!3d20.510183718829918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e58330a673659%3A0x9cedf516c7d86e9a!2sSan%20Miguel%20de%20Cozumel%2C%20Quintana%20Roo%2C%20M%C3%A9xico!5e0!3m2!1spt-BR!2sbr!4v1712533685692!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+        <form action="submit.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Scoots Island Rentals. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
