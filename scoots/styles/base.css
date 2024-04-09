@@ -160,8 +160,9 @@ nav ul li a.active {
     transition: opacity 0.3s ease;
 }
 
-.overlay h3 {
+.overlay h3, .overlay p {
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .card:hover .overlay {
