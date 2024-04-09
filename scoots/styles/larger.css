@@ -1,7 +1,5 @@
 @media screen and (min-width: 768px) {
 
-
-
     #container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -9,4 +7,110 @@
 
     }
 
+    #container section:nth-child(1) {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #container section:nth-child(1) h2 {
+        color: var(--teal-color);
+    }
+
+    #container section:nth-child(1) ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    #container section:nth-child(1) label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    /* Rental Form */
+    #container section:nth-child(2) form {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #container section:nth-child(2) form fieldset {
+        margin-bottom: 20px;
+    }
+
+    #container section:nth-child(2) form fieldset legend {
+        color: var(--teal-color);
+    }
+
+    #container section:nth-child(2) form label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    #container section:nth-child(2) form input[type="date"],
+    #container section:nth-child(2) form input[type="number"],
+    #container section:nth-child(2) form input[type="text"],
+    #container section:nth-child(2) form input[type="email"],
+    #container section:nth-child(2) form textarea,
+    #container section:nth-child(2) form select {
+        width: calc(100% - 22px);
+    }
+
+    #container section:nth-child(2) form button[type="button"],
+    #container section:nth-child(2) form button[type="submit"] {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .products-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header,
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer img {
+        width: 40px;
+    }
+
+    #thank-you-img img {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #container section {
+        padding: 10px;
+    }
+
+    #container section:nth-child(1),
+    #container section:nth-child(2) form {
+        padding: 10px;
+    }
+
+    #container section:nth-child(2) form input,
+    #container section:nth-child(2) form select,
+    #container section:nth-child(2) form textarea {
+        width: 100%;
+    }
 }

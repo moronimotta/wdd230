@@ -58,8 +58,6 @@ function closeMessage() {
     messageSection.style.display = 'none';
 }
 
-closeButton.addEventListener('click', closeMessage);
-
 async function displayWeather() {
     await getCurrentWeather();
     await getNextDayForecast();

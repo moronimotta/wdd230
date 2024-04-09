@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 :root {
     --teal-color: #004d40;
 }
 
+* {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f5f5f5;
     width: 100%;
-    max-width: 1200px;
+}
+
+h2,h3,h4,h5,h6, figcaption{
+    color: var(--teal-color);
 }
 
 header,
@@ -20,9 +29,6 @@ footer {
 }
 
 header {
-    background-image: url('../../chamber/images/citygate.jpg');
-    background-size: cover;
-    background-position: center;
     padding: 50px 20px;
     text-align: center;
     filter: brightness(80%);
@@ -109,10 +115,31 @@ input[type="submit"]:hover, button:hover {
 }
 
 .card img {
-    width: 300px;
-    height: 350px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    color: yellow; /* Change the color to indicate the active link */
+}
+
 
 .overlay {
     position: absolute;
@@ -124,12 +151,16 @@ input[type="submit"]:hover, button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 77, 64, 0.6);
+    background-color: rgba(0, 62, 51, 0.6);
     color: white;
     padding: 20px;
     box-sizing: border-box;
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+.overlay h3 {
+    color: white;
 }
 
 .card:hover .overlay {
@@ -142,7 +173,8 @@ input[type="submit"]:hover, button:hover {
 }
 
 .hero {
-    background-image: url('../../chamber/images/citygate.jpg');
+    position: relative; 
+    background-image: url('../images/hero-image.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -151,7 +183,28 @@ input[type="submit"]:hover, button:hover {
     align-items: center;
     text-align: center;
     color: white;
+    margin: 5px 0;
 }
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.hero h1,
+.hero p, 
+.hero a {
+    position: relative; 
+    z-index: 1; 
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
 
 .hero-content {
     max-width: 600px;
@@ -297,69 +350,6 @@ button:hover {
     background-color: #00796b;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 20px;
-    gap: 20px;
-}
-
-/* Rental Agreement */
-#container section:nth-child(1) {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#container section:nth-child(1) h2 {
-    color: var(--teal-color);
-}
-
-#container section:nth-child(1) ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-#container section:nth-child(1) label {
-    display: block;
-    margin-top: 10px;
-}
-
-/* Rental Form */
-#container section:nth-child(2) form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#container section:nth-child(2) form fieldset {
-    margin-bottom: 20px;
-}
-
-#container section:nth-child(2) form fieldset legend {
-    color: var(--teal-color);
-}
-
-#container section:nth-child(2) form label {
-    display: block;
-    margin-top: 10px;
-}
-
-#container section:nth-child(2) form input[type="date"],
-#container section:nth-child(2) form input[type="number"],
-#container section:nth-child(2) form input[type="text"],
-#container section:nth-child(2) form input[type="email"],
-#container section:nth-child(2) form textarea,
-#container section:nth-child(2) form select {
-    width: calc(100% - 22px);
-}
-
-#container section:nth-child(2) form button[type="button"],
-#container section:nth-child(2) form button[type="submit"] {
-    width: 100%;
-}
 
 /* Button Style Pattern */
 button,
@@ -385,9 +375,19 @@ input[type="submit"] {
     margin: 0 auto;
 }
 
+
 #rental-agreement img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
     margin: 20px auto;
-}
+  }
+
+  #thank-you-img {
+    text-align: center;
+    margin: 20px;
+  }
+
+  iframe {
+    margin: 5px;
+  }
