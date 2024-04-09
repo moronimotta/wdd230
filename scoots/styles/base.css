@@ -2,6 +2,7 @@
 
 :root {
     --teal-color: #004d40;
+    --light-green-color: #00796b;
 }
 
 * {
@@ -94,7 +95,7 @@ select {
 }
 
 input[type="submit"]:hover, button:hover {
-    background-color: #00796b;
+    background-color: var(--light-green-color);
 }
 
 .motor-icon {
@@ -221,7 +222,7 @@ nav ul li a.active {
 }
 
 .btn {
-    background-color: #004d40;
+    background-color: var(--teal-color);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -230,7 +231,7 @@ nav ul li a.active {
 }
 
 .btn:hover {
-    background-color: #00796b;
+    background-color: var(--light-green-color);
 }
 
 .footer-content {
@@ -281,7 +282,7 @@ table {
 }
 
 th {
-    background-color: #004d40;
+    background-color: var(--teal-color);
     color: white;
     font-weight: bold;
     padding: 10px;
@@ -332,7 +333,7 @@ tr:hover {
 }
 
 .contact-us button[type="submit"] {
-    background-color: #004d40;
+    background-color: var(--teal-color);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -342,7 +343,7 @@ tr:hover {
 
 .contact-us button[type="submit"]:hover,
 button:hover {
-    background-color: #00796b;
+    background-color: var(--light-green-color);
 }
 
 
@@ -360,7 +361,7 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    background-color: #004d40;
+    background-color: var(--teal-color);
     color: white;
 }
 

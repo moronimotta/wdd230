@@ -63,10 +63,23 @@
         width: 100%;
     }
 
+    .rentals-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    
+    }
+
 }
 
 @media screen and (max-width: 767px) {
     .products-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rentals-images {
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
