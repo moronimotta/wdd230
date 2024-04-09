@@ -11,8 +11,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://images3.alphacoders.com/133/1332803.png">
     <meta property="og:url" content="https://moronimotta.github.io/wdd230/scoots">
-    <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/larger.css">
     <link rel="icon" href="favicon.ico">
     <title>Scoots Island Rentals - Customize your reservation!</title>
@@ -71,7 +71,7 @@
 
         <section>
 
-            <form action="thankyou.html" method="get" id="reservation-form" disabled>
+            <form action="thankyou.html" method="get" id="reservation-form">
                 <fieldset>
                     <legend>Rental Details</legend>
                     <label for="date">Date:</label>
@@ -97,11 +97,12 @@
 
                     <label for="model-type">Model Type:</label>
                     <select id="model-type" name="model-type" required>
-
+                        <option value="" disabled selected></option>
                     </select>
 
                     <label for="period">Period:</label>
                     <select id="period" name="period" required>
+                        <option value="" disabled selected></option> 
                         <option value="half-day">Half Day</option>
                         <option value="full-day">Full Day</option>
                     </select>
@@ -115,7 +116,6 @@
                         <legend>Total Cost</legend>
                         <p id="total-cost">Total: $0</p>
                     </fieldset>
-
                 </fieldset>
 
                 <fieldset>
@@ -147,11 +147,10 @@
                         placeholder="Enter any special accommodations or comments"></textarea>
                 </fieldset>
 
-
-
                 <input type="hidden" id="selectedType" name="selectedType">
                 <input type="submit" value="Submit Reservation">
             </form>
+
 
         </section>
     </div>
@@ -161,9 +160,9 @@
     <footer>
         <p>&copy; 2024 Scoots Island Rentals. All rights reserved.</p>
         <div class="social-media-icon">
-            <a href="https://www.facebook.com"><img src="./images/icons8-facebook-color-70.png"></a>
-            <a href="https://www.twitter.com"><img src="./images/icons8-instagram-color-70.png"></a>
-            <a href="https://www.instagram.com"><img src="./images/icons8-twitter-color-70.png"></a>
+            <a href="https://www.facebook.com"><img src="./images/icons8-facebook-color-70.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com"><img src="./images/icons8-instagram-color-70.png" alt="Instagram"></a>
+            <a href="https://www.instagram.com"><img src="./images/icons8-twitter-color-70.png" alt="Twitter"></a>
         </div>
     </footer>
 

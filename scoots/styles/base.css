@@ -137,7 +137,7 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    color: yellow; /* Change the color to indicate the active link */
+    color: yellow; 
 }
 
 
@@ -274,14 +274,12 @@ nav ul li a.active {
     float: right;
 }
 
-/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-/* Table Header */
 th {
     background-color: #004d40;
     color: white;
@@ -290,19 +288,16 @@ th {
     text-align: left;
 }
 
-/* Table Body */
 td,
 th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-/* Alternate row color */
 tr:nth-child(even) {
     background-color: #e0e0e0;
 }
 
-/* Hover effect */
 tr:hover {
     background-color: #ddd;
 }
@@ -351,7 +346,6 @@ button:hover {
 }
 
 
-/* Button Style Pattern */
 button,
 input[type="submit"] {
     margin: 0.5em;
