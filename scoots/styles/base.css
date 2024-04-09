@@ -1,13 +1,45 @@
+:root {
+    --teal-color: #004d40;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f5f5f5;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
-header, nav, footer {
-    background-color: #333;
+header,
+nav,
+footer {
+    background-color: var(--teal-color);
     color: white;
     padding: 10px 20px;
+}
+
+header {
+    background-image: url('../../chamber/images/citygate.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    filter: brightness(80%);
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-bottom: 20px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
 }
 
 nav ul {
@@ -36,6 +68,7 @@ form {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: white;
 }
 
 label {
@@ -55,16 +88,9 @@ select {
     border-radius: 5px;
 }
 
-input[type="submit"] {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
 
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #00796b;
 }
 
 .motor-icon {
@@ -73,4 +99,298 @@ input[type="submit"]:hover {
     cursor: pointer;
 }
 
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
+.card img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 77, 64, 0.6);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hero {
+    background-image: url('../../chamber/images/citygate.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00796b;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-media-icon img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#bannerButton:hover {
+    cursor: pointer;
+    background-color: #ab191936;
+}
+
+.banner, .banner-warning {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #333;
+    
+}
+
+.banner-warning {
+    text-align: center;
+}
+
+.banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#bannerButton {
+    border: none;
+    background: none;
+    outline: none;
+    float: right;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  /* Table Header */
+  th {
+    background-color: #004d40; /* Teal color */
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  /* Table Body */
+  td, th {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 8px;
+  }
+  
+  /* Alternate row color */
+  tr:nth-child(even) {
+    background-color: #e0e0e0; /* Slightly darker gray background */
+  }
+  
+  /* Hover effect */
+  tr:hover {
+    background-color: #ddd; /* Darker gray background on hover */
+  }
+
+.contact-us {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto; /* Adjusted margin */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  .contact-us label {
+    font-weight: bold;
+  }
+  
+  .contact-us input[type="text"],
+  .contact-us input[type="email"],
+  .contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .contact-us textarea {
+    height: 100px; /* Set the height for the textarea */
+  }
+  
+  .contact-us button[type="submit"] {
+    background-color: #004d40; /* Teal color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-us button[type="submit"]:hover, button:hover {
+    background-color: #00796b; /* Darker teal color on hover */
+  }
+  
+ 
+  
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    margin: 20px; 
+    gap: 20px;
+
+}
+
+
+/* Rental Agreement */
+#container section:nth-child(1) {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#container section:nth-child(1) h2 {
+    color: var(--teal-color);
+}
+
+#container section:nth-child(1) ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#container section:nth-child(1) label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Rental Form */
+#container section:nth-child(2) form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#container section:nth-child(2) form fieldset {
+    margin-bottom: 20px;
+}
+
+#container section:nth-child(2) form fieldset legend {
+    color: var(--teal-color);
+}
+
+#container section:nth-child(2) form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#container section:nth-child(2) form input[type="date"],
+#container section:nth-child(2) form input[type="number"],
+#container section:nth-child(2) form input[type="text"],
+#container section:nth-child(2) form input[type="email"],
+#container section:nth-child(2) form textarea,
+#container section:nth-child(2) form select {
+    width: calc(100% - 22px); /* Adjusted width */
+}
+
+#container section:nth-child(2) form button[type="button"],
+#container section:nth-child(2) form button[type="submit"] {
+    width: 100%;
+}
+
+/* Button Style Pattern */
+button, input[type="submit"] {
+    margin: 0.5em;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    max-width: 200px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #004d40;
+    color: white;
+}
+
+#rental-agreement {
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+#rental-agreement img {
+    max-width: 100%; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 20px auto; /* Add some margin for spacing */
+}

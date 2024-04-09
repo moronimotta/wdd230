@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoots Island Rentals</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="author" content="Moroni Motta">
+    <meta name="description"
+        content="Scoots Island Rentals - Your ultimate destination for motor scooter, jeep, and ATV rentals on the picturesque island of Cozumel. Explore the beautiful coasts and inlets of Cozumel with our friendly and easy-to-rent services.">
+    <meta property="og:title" content="Scoots Island Rentals">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images3.alphacoders.com/133/1332803.png">
+    <meta property="og:url" content="https://moronimotta.github.io/wdd230/scoots">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/larger.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Scoots Island Rentals - Your Ultimate Destination for Motor Scooter, Jeep, and ATV Rentals</title>
 </head>
 
 <body>
     <header>
-        <h1>Welcome to Scoots Island Rentals</h1>
-        <p>Make your reservation now!</p>
-        <a href="./reservations.html">Reserve Now</a>
+        <h1>Scoots Island Rentals</h1>
+        <p>"Discover Freedom, Explore Cozumel!"</p>
     </header>
 
     <nav>
@@ -23,44 +32,81 @@
         </ul>
     </nav>
 
-    <section id="rentals">
-        <h2>Types of Rentals</h2>
-        <p>Summary information about all the types of rentals goes here.</p>
-    </section>
 
-    <!-- Use a lazy loading technique to support progressive design.
- -->
-
-    <section id="weather">
-        <h2>Weather Information</h2>
-        <div id="current-weather">
-            <h3>Current Weather</h3>
-            <p>Temperature: <span id="current-temp"></span></p>
-            <p>Humidity: <span id="current-humidity"></span></p>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Scoots Island Rentals</h1>
+                <p>Make your reservation now!</p>
+                <a href="./reservations.html" class="btn">Reserve Now</a>
+            </div>
         </div>
-        <div id="forecast-weather">
-            <h3>Next Day's Forecast</h3>
-            <p>Temperature at 3:00pm: <span id="forecast-temp"></span></p>
-        </div>
-    </section>
-    <section id="message">
-        <p>Today's high temperature: <span id="temp-max"></span></p>
-        <button id="close-message">Close</button>
-    </section>
 
 
-    <section id="social-media">
-        <h2>Connect with Us</h2>
-        <a href="https://www.facebook.com/scootsrentals">Facebook</a>
-        <a href="https://www.twitter.com/scootsrentals">Twitter</a>
-        <a href="https://www.instagram.com/scootsrentals">Instagram</a>
-    </section>
+        <section id="rentals">
+            <h2>Our Rentals</h2>
+            <div class="products-container">
+                <div class="card">
+                    <img src="https://images3.alphacoders.com/133/1332803.png" alt="Motor Scooter Rental">
+                    <div class="overlay">
+                        <h3>Motor Scooter Rentals</h3>
+                        <p>Explore Cozumel's beauty with our motor scooter rentals. Convenient, easy-to-use, and perfect
+                            for cruising along the island's coasts.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images3.alphacoders.com/133/1332803.png" alt="Jeep Rental">
+                    <div class="overlay">
+                        <h3>Jeep Rentals</h3>
+                        <p>Embark on an adventure with our jeep rentals. Ideal for exploring Cozumel's rugged terrain
+                            and hidden gems.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images3.alphacoders.com/133/1332803.png" alt="ATV Rental">
+                    <div class="overlay">
+                        <h3>ATV Rentals</h3>
+                        <p>Experience the thrill of off-road exploration with our ATV rentals. Discover Cozumel's
+                            lesser-known trails and landscapes.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section id="weather">
+            <h2>Weather Information</h2>
+            <div class="banner">
+                <div id="current-weather">
+                    <h3>Current Weather</h3>
+                    <p>Temperature: <span id="current-temp"></span></p>
+                    <p>Humidity: <span id="current-humidity"></span></p>
+                </div>
+                <div id="forecast-weather">
+                    <h3>Next Day's Forecast</h3>
+                    <p>Temperature at 3:00pm: <span id="forecast-temp"></span></p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="message">
+            <div class="banner-warning">
+                <button id="bannerButton">❌</button>
+                <p>Today's highest temperature: <span id="temp-max"></span></p>
+            </div>
+        </section>
 
     <footer>
         <p>&copy; 2024 Scoots Island Rentals. All rights reserved.</p>
+        <div class="social-media-icon">
+            <a href="https://www.facebook.com"><img src="./images/icons8-facebook-color-70.png"></a>
+            <a href="https://www.twitter.com"><img src="./images/icons8-instagram-color-70.png"></a>
+            <a href="https://www.instagram.com"><img src="./images/icons8-twitter-color-70.png"></a>
+        </div>
     </footer>
 
     <script src="./scripts/weather.js"></script>
+    <script src="./scripts/temp-button.js"></script>
 </body>
 
 </html>

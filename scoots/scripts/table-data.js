@@ -22,7 +22,7 @@ function displayRentals(data) {
     const tableBody = document.createElement("tbody");
 
     const headerRow = document.createElement("tr");
-    const headers = ["ID", "Name", "Max Persons", "Half Day Price", "Full Day Price"];
+    const headers = ["Name", "Max Persons", "Half Day Price", "Full Day Price"];
     headers.forEach((header) => {
         const th = document.createElement("th");
         th.textContent = header;
@@ -33,8 +33,8 @@ function displayRentals(data) {
 
     data.rentals.forEach((rental) => {
         const row = document.createElement("tr");
-        const { id, name, maxPersons, halfDayPrice, fullDayPrice } = rental;
-        const rowData = [id, name, maxPersons, halfDayPrice, fullDayPrice];
+        const { name, maxPersons, halfDayPrice, fullDayPrice } = rental;
+        const rowData = [name, maxPersons, halfDayPrice, fullDayPrice];
         rowData.forEach((data) => {
             const td = document.createElement("td");
             td.textContent = data;

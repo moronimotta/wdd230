@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Moroni Motta">
-    <meta name="description" content="Web Frontend Development course website">
-    <meta property="og:title" content="WDD230 - Web Frontend Development">
+    <meta name="description"
+        content="Scoots Island Rentals - Your ultimate destination for motor scooter, jeep, and ATV rentals on the picturesque island of Cozumel. Explore the beautiful coasts and inlets of Cozumel with our friendly and easy-to-rent services.">
+    <meta property="og:title" content="Scoots Island Rentals">
     <meta property="og:type" content="website">
-    <!-- <meta property="og:image" content="https://moronimotta.github.io/wdd230/joinville.jpg"> -->
+    <meta property="og:image" content="https://images3.alphacoders.com/133/1332803.png">
     <meta property="og:url" content="https://moronimotta.github.io/wdd230/scoots">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/larger.css">
     <link rel="icon" href="favicon.ico">
-    <title>Moroni Motta - WDD 230 - Web Frontend Development</title>
+    <title>Scoots Island Rentals - Customize your reservation!</title>
 </head>
 
 <body>
     <header>
-        <h1>Welcome to Scoots Island Rentals</h1>
-        <p>Make your reservation now!</p>
-        <a href="./reservations.html">Reserve Now</a>
+        <h1>Scoots Island Rentals</h1>
+        <p>"Discover Freedom, Explore Cozumel!"</p>
     </header>
 
     <nav>
@@ -34,7 +34,7 @@
 
     <div id="container">
 
-        <section>
+        <section id="rental-agreement">
             <h2>Rental Agreement</h2>
             <p>Please read and agree to the terms and conditions below before making a reservation:</p>
             <ul>
@@ -51,11 +51,19 @@
             </ul>
             <label for="agreement">I have read and agree to the terms and conditions:</label>
             <input type="checkbox" id="agreement" name="agreement" required onchange="unlockForm()">
+            <h2>Those Who Rent Are:</h2>
+            <img src="https://images3.alphacoders.com/133/1332803.png" alt="Motor Scooter Rental" loading="lazy">
+            <figcaption>Happy!</figcaption>
+            <img src="https://images3.alphacoders.com/133/1332803.png" alt="Motor Scooter Rental" loading="lazy">
+            <figcaption>Grateful!</figcaption>
+            <img src="https://images3.alphacoders.com/133/1332803.png" alt="Motor Scooter Rental" loading="lazy">
+            <figcaption>Glad!</figcaption>
+
         </section>
 
         <section>
 
-            <form method="POST" id="reservation-form" disabled>
+            <form action="thankyou.html" method="get" id="reservation-form" disabled>
                 <fieldset>
                     <legend>Rental Details</legend>
                     <label for="date">Date:</label>
@@ -144,7 +152,13 @@
 
     <footer>
         <p>&copy; 2024 Scoots Island Rentals. All rights reserved.</p>
+        <div class="social-media-icon">
+            <a href="https://www.facebook.com"><img src="./images/icons8-facebook-color-70.png"></a>
+            <a href="https://www.twitter.com"><img src="./images/icons8-instagram-color-70.png"></a>
+            <a href="https://www.instagram.com"><img src="./images/icons8-twitter-color-70.png"></a>
+        </div>
     </footer>
+
 
     <script src="./scripts/form.js"></script>
 </body>
